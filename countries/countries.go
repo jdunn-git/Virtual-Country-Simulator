@@ -11,13 +11,15 @@ type Country struct {
 	Name         string
 	ResourcesMap map[string]*resources.CountryResource
 	Quality      float64
+	Self         bool
 }
 
 // NewCountry will construct a new Country pointer
-func NewCountry(name string, countryResources []*resources.CountryResource) *Country {
+func NewCountry(name string, countryResources []*resources.CountryResource, self bool) *Country {
 	c := &Country{
 		Name:         name,
 		ResourcesMap: make(map[string]*resources.CountryResource),
+		Self:         self,
 	}
 
 	for _, res := range countryResources {
@@ -30,9 +32,30 @@ func NewCountry(name string, countryResources []*resources.CountryResource) *Cou
 	return c
 }
 
+// GetSelf can be used to get the "self" country
+func GetSelf(countriesMap map[string]*Country) (*Country, error) {
+	for _, country := range countriesMap {
+		if country.Self {
+			return country, nil
+		}
+	}
+
+	return &Country{}, fmt.Errorf("there was no \"self\" country")
+}
+
 // GetName will return the Name of this country
 func (c *Country) GetName() string {
 	return c.Name
+}
+
+// GetQualityRating will return the Quality of this country
+func (c *Country) GetQualityRating() float64 {
+	return c.Quality
+}
+
+// SetQualityRating will set the Quality of this country
+func (c *Country) SetQualityRating(quality float64) {
+	c.Quality = quality
 }
 
 // GetResourceAmount will return the amount this country has of the passed in resource
@@ -61,6 +84,21 @@ func (c *Country) Print() {
 // AdjustResource will increase or decrease the resource by the amount provided
 func (c *Country) AdjustResource(resourceName string, adjustment int) {
 	c.ResourcesMap[resourceName].SetAmount(c.ResourcesMap[resourceName].GetAmount() + adjustment)
+}
+
+// Duplicate will return an identical copy to this Country
+func (c *Country) Duplicate() *Country {
+	duplicatedResourcesMap := make(map[string]*resources.CountryResource)
+
+	for key, resource := range c.ResourcesMap {
+		duplicatedResourcesMap[key] = resource.Duplicate()
+	}
+
+	return &Country{
+		Name:         c.Name,
+		ResourcesMap: duplicatedResourcesMap,
+		Quality:      c.Quality,
+	}
 }
 
 // Transform will transform this country's resources according to the inputs and outputs

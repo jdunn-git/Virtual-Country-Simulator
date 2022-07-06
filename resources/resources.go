@@ -83,3 +83,11 @@ func (cr *CountryResource) SetAmount(newAmount int) {
 func (cr *CountryResource) GetWeight() float32 {
 	return cr.Resource.Weight
 }
+
+// Duplicate will return an identical copy to this CountryResource
+func (cr *CountryResource) Duplicate() *CountryResource {
+	return &CountryResource{
+		Resource: cr.Resource,
+		Amount:   cr.Amount,
+	}
+}

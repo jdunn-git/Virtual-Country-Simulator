@@ -1,0 +1,7 @@
+Country,Self,Population,MetallicElements,Timber,AvailableLand,MetallicAlloys,MetallicAlloysWaste,Electronics,ElectronicsWaste,Housing,HousingWaste,Farm,FarmWaste,Food,FoodWaste,Military,MilitaryWaste
+Gondor,True,10000,400,500,900,0,0,0,0,0,0,0,0,0,0,0,0
+Rohan,False,5000,200,400,1500,0,0,0,0,0,0,0,0,0,0,0,0
+The Shire,False,8000,0,600,200,0,0,0,0,0,0,0,0,0,0,0,0
+Rivendel,False,500,200,300,50,0,0,0,0,0,0,0,0,0,0,0,0
+Mirkwood,False,800,300,1000,400,0,0,0,0,0,0,0,0,0,0,0,0
+Erebor,False,2500,1000,200,100,0,0,0,0,0,0,0,0,0,0,0,0

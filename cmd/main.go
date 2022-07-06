@@ -5,12 +5,16 @@ import (
 	"CS5260_Final_Project/quality"
 	"CS5260_Final_Project/resources"
 	"CS5260_Final_Project/scheduler"
+	"CS5260_Final_Project/simulator"
 	"CS5260_Final_Project/transfers"
 	"CS5260_Final_Project/transformations"
+	"container/heap"
 	"encoding/csv"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -40,7 +44,7 @@ func main() {
 	}
 
 	// Import countries
-	lines, err = ReadCsv("countries.csv")
+	lines, err = ReadCsv("countries_2.csv")
 	if err != nil {
 		panic(err)
 	}
@@ -56,6 +60,10 @@ func main() {
 		}
 
 		countryName := line[0]
+		self, err := strconv.ParseBool(line[1])
+		if err != nil {
+			log.Fatal(err)
+		}
 
 		countryResources := make([]*resources.CountryResource, len(resourcesMap))
 		for i, value := range line {
@@ -75,46 +83,89 @@ func main() {
 			)
 		}
 
-		newCountry := countries.NewCountry(countryName, countryResources)
-		newCountry.Quality = quality.PerformQualityCalculation(newCountry)
+		newCountry := countries.NewCountry(countryName, countryResources, self)
+		newCountry.SetQualityRating(quality.PerformQualityCalculation(newCountry))
 
 		countriesMap[countryName] = newCountry
 	}
 
-	for _, res := range resourcesMap {
-		res.Print()
-		fmt.Println()
-	}
-
-	for _, country := range countriesMap {
-		country.Print()
-		fmt.Println()
-	}
+	//for _, res := range resourcesMap {
+	//	res.Print()
+	//	fmt.Println()
+	//}
+	//
+	//for _, country := range countriesMap {
+	//	country.Print()
+	//	fmt.Println()
+	//}
 
 	transformationMap := transformations.InitializeTransformations()
 	transferMap := transfers.InitializeTransfers()
 
 	scheduler.InitializeAvailableActions(transformationMap, transferMap)
-	gondor := countriesMap["Gondor"]
-	gondor.Print()
-	err = scheduler.PerformAction(gondor, nil, "Alloys Transformation")
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println()
-	gondor.Print()
-	fmt.Println()
 
-	rohan := countriesMap["Rohan"]
-	rohan.Print()
-	err = scheduler.PerformAction(gondor, rohan, "Timber Transfer")
-	if err != nil {
-		panic(err)
+	//gondor := countriesMap["Gondor"]
+	//gondor.Print()
+	//err = scheduler.PerformAction(gondor, nil, "Alloys Transformation")
+	//err = scheduler.PerformAction(gondor, nil, "Alloys Transformation")
+	//if err != nil {
+	//	panic(err)
+	//}
+	//fmt.Println()
+	//gondor.Print()
+	//fmt.Println()
+	//
+	//rohan := countriesMap["Rohan"]
+	//rohan.Print()
+	//err = scheduler.PerformAction(gondor, rohan, "Timber Transfer")
+	//if err != nil {
+	//	panic(err)
+	//}
+	//fmt.Println()
+	//gondor.Print()
+	//fmt.Println()
+	//rohan.Print()
+	//fmt.Println()
+
+	// TODO: Make this more configurable
+	maxSize := 50
+	maxDepth := 4
+	sim, worldState := simulator.InitializeSimulator(countriesMap, maxSize, maxDepth)
+
+	// Grab the top three branches from the states
+
+	sim.SimulateAllActionsFromState(scheduler.AvailableActions, countriesMap, worldState, 1)
+	time.Sleep(time.Duration(500))
+	topStates, keepStates := sim.GetTopNLeaves(3, 1)
+	sim.FlushQueue()
+	rebuildStates := make([]*simulator.WorldState, len(keepStates))
+	i := 0
+	for _, state := range keepStates {
+		fmt.Printf("Keep States (%v), index: %v, WorldValue: %v\n", state.Generation, state.Index, state.WorldValue)
+		state.Index = -1
+		rebuildStates[i] = state
+		i++
 	}
+	sim.RebuildQueue(rebuildStates)
+	_ = topStates
+
+	// TODO: Don't forget to progress the "actual" world alongside the simulation
+	//  - Will need to get the first gen parent and then use that to take the action
+
 	fmt.Println()
-	gondor.Print()
-	fmt.Println()
-	rohan.Print()
+	//sim.PrintWorldStates()
+	states := sim.States
+	for _, _ = range states {
+		heap.Init(&states)
+	}
+	//heap.Init(&states)
+	for len(states) > 0 {
+		state := heap.Pop(&states)
+		fmt.Printf("World value: %v\n", state.(*simulator.WorldState).WorldValue)
+		//heap.Init(&states)
+		time.Sleep(100 * time.Millisecond)
+	}
+
 	fmt.Println()
 
 }

@@ -14,18 +14,26 @@ type TransformationResource struct {
 // Transformation is a resource being input or output from a transformation
 type Transformation struct {
 	Name    string
+	Type    string
 	Inputs  []scheduler.ActionResource
 	Outputs []scheduler.ActionResource
 }
 
 // Take will perform the transformation on the provided country
 func (t Transformation) Take(country scheduler.Country, otherCountry scheduler.Country) error {
+	//fmt.Printf("Action Taken: %s\n", t.Name)
+
 	// The interface requires two countries passed in, but only one is needed for the Transformation Action
 	if otherCountry != nil {
 		return fmt.Errorf("two countries passed into Transformation, but only one is needed")
 	}
 
 	return country.Transform(t.Inputs, t.Outputs, t.Name)
+}
+
+// GetType returns the type of this action
+func (t Transformation) GetType() string {
+	return t.Type
 }
 
 // InitializeTransformations will initialize the map of Transformations
@@ -35,6 +43,7 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	// Housing Template
 	transformationMap["Housing Transformation"] = Transformation{
 		Name: "Housing Transformation",
+		Type: scheduler.TransformType,
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
@@ -72,6 +81,7 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	// Alloys Template
 	transformationMap["Alloys Transformation"] = Transformation{
 		Name: "Alloys Transformation",
+		Type: scheduler.TransformType,
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
@@ -101,6 +111,7 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	// Electronics Template
 	transformationMap["Electronics Transformation"] = Transformation{
 		Name: "Electronics Transformation",
+		Type: scheduler.TransformType,
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
@@ -134,6 +145,7 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	// Farm Template
 	transformationMap["Farm Transformation"] = Transformation{
 		Name: "Farm Transformation",
+		Type: scheduler.TransformType,
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
@@ -163,6 +175,7 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	// Food Template
 	transformationMap["Food Transformation"] = Transformation{
 		Name: "Food Transformation",
+		Type: scheduler.TransformType,
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
@@ -192,6 +205,7 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	// Military Template
 	transformationMap["Military Transformation"] = Transformation{
 		Name: "Military Transformation",
+		Type: scheduler.TransformType,
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",

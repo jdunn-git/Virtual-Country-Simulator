@@ -2,7 +2,6 @@ package quality
 
 import (
 	"CS5260_Final_Project/countries"
-	"fmt"
 	"math"
 )
 
@@ -47,16 +46,24 @@ func PerformQualityCalculation(country *countries.Country) float64 {
 	// Partial Quality - Military
 	militaryQuality := ((military * militaryWeight) + (militaryWaste * militaryWasteWeight)) / (population * 0.2)
 
-	///*
-	fmt.Printf("foodQuality: %v\n", foodQuality)
-	fmt.Printf("housingQuality: %v\n", housingQuality)
-	fmt.Printf("electronicsQuality: %v\n", electronicsQuality)
-	fmt.Printf("metalsQuality: %v\n", metalsQuality)
-	fmt.Printf("landQuality: %v\n", landQuality)
-	fmt.Printf("militaryQuality: %v\n", militaryQuality)
-	//*/
+	// Multiple each by 10 since they're all low typically - higher values make for a more interesting simulation
+	foodQuality *= 10
+	housingQuality *= 10
+	electronicsQuality *= 10
+	metalsQuality *= 10
+	landQuality *= 10
+	militaryQuality *= 10
+
+	/*
+		fmt.Printf("foodQuality: %v\n", foodQuality)
+		fmt.Printf("housingQuality: %v\n", housingQuality)
+		fmt.Printf("electronicsQuality: %v\n", electronicsQuality)
+		fmt.Printf("metalsQuality: %v\n", metalsQuality)
+		fmt.Printf("landQuality: %v\n", landQuality)
+		fmt.Printf("militaryQuality: %v\n", militaryQuality)
+	*/
 
 	// Final Quality Calculation
-	return (foodQuality * 10) + (housingQuality * 3) + electronicsQuality + metalsQuality +
-		landQuality + (militaryQuality * 5)
+	return (foodQuality * 1.00) + (housingQuality * .3) + (electronicsQuality * .15) + (metalsQuality * .15) +
+		(landQuality * .20) + (militaryQuality * .50)
 }
