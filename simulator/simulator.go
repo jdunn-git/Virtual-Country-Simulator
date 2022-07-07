@@ -6,38 +6,67 @@ import (
 	"CS5260_Final_Project/scheduler"
 	"container/heap"
 	"fmt"
+	"math"
 	"math/rand"
+	"time"
+)
+
+var (
+	X0 float64
+	K  float64
+	L  float64
 )
 
 // Simulator can be used to simulate actions against simulated worlds and maintains the states in a
 //  priority queue
 type Simulator struct {
-	States   WorldStates // This is the Priority Queue for the simulator
-	MaxSize  int
-	MaxDepth int
+	States       WorldStates // This is the Priority Queue for the simulator
+	MaxSize      int
+	MaxDepth     int
+	InitialDepth int
+	Randomizer   *rand.Rand
 }
 
 // InitializeSimulator will initialize the simulator to be able to process any number of simulated worlds
 //  in the priority queue
-func InitializeSimulator(countriesMap map[string]*countries.Country, maxSize int, maxDepth int) (*Simulator, *WorldState) {
-	return &Simulator{
-			MaxSize:  maxSize,
-			MaxDepth: maxDepth,
-		}, &WorldState{
-			SimulatedCountries: countriesMap,
-			Generation:         0,
+func InitializeSimulator(worldStates WorldStates, maxSize, maxDepth, initialDepth int) *Simulator {
+	s := &Simulator{
+		MaxSize:      maxSize,
+		MaxDepth:     maxDepth,
+		States:       worldStates,
+		InitialDepth: initialDepth,
+		Randomizer:   rand.New(rand.NewSource(time.Now().UnixNano())),
+	}
+
+	s.GenerateIntialRewards()
+
+	heap.Init(&s.States)
+
+	return s
+}
+
+// GenerateIntialRewards will set the rewards for the initial world state when the simulator is initialized
+func (s *Simulator) GenerateIntialRewards() {
+	for _, state := range s.States {
+		if state.PreviousState != nil {
+			for _, country := range state.SimulatedCountries {
+				// Only need to change the Discounted reward since this is dependent on the depth
+				country.SetDiscountedReward(quality.CalculateDiscountedReward(country,
+					s.MaxDepth-state.Generation))
+			}
 		}
+	}
 }
 
 // SimulateAllActionsFromState will add every action on to the priority queue
 func (s *Simulator) SimulateAllActionsFromState(actionMap map[string]scheduler.ScheduleAction,
-	countryMap map[string]*countries.Country,
+	countryMap map[string]scheduler.Country,
 	startingState *WorldState,
-	depth int) {
+	depth int) bool {
 
 	// Break conditions
 	if depth > s.MaxDepth || len(s.States) >= s.MaxSize {
-		return
+		return len(s.States) >= s.MaxSize
 	}
 
 	// Make an action list we can safely remove from
@@ -64,8 +93,8 @@ func (s *Simulator) SimulateAllActionsFromState(actionMap map[string]scheduler.S
 		actions = newActions
 
 		// Randomly get two countries, with one being self
-		var country *countries.Country
-		var otherCountry *countries.Country
+		var country scheduler.Country
+		var otherCountry scheduler.Country
 		var err error
 
 		country, err = countries.GetSelf(countryMap)
@@ -73,38 +102,60 @@ func (s *Simulator) SimulateAllActionsFromState(actionMap map[string]scheduler.S
 			panic("No self country")
 		}
 
+		var actionError error
 		// Only need two countries when there's a Transfer
 		if action.GetType() == scheduler.TransferType {
 			// This approach isn't fast but it promotes the most random approach within reason
-			countryList := make([]*countries.Country, len(countryMap)-1)
+			countryList := make([]scheduler.Country, len(countryMap)-1)
 			i = 0
 			for _, c := range countryMap {
 				// Skip the self country
-				if c.Name != country.Name {
+				if c.GetName() != country.GetName() {
 					countryList[i] = c
 					i++
 				}
 			}
-			countryRand := rand.Intn(len(countryList))
+			countryRand := s.Randomizer.Intn(len(countryList))
 			otherCountry = countryList[countryRand]
 
 			// Perform one more random check to see whether the self country should be the primary or secondary country
-			selfRand := rand.Intn(2)
+			selfRand := s.Randomizer.Intn(2)
 			if selfRand%2 == 0 {
 				tempCountry := country
 				country = otherCountry
 				otherCountry = tempCountry
 			}
 
-			// Simulate action if possible, adding to the priority queue
-			newWorldState = s.SimulateActionIfPossible(startingState, country, otherCountry, action)
+			// Only perform an action if the action does not already exist in the priority queue
+			actionId := fmt.Sprintf("%v | %v-%v", startingState.Id, action.GetName(), country.GetName())
+			if !s.States.CheckIfActionExists(actionId) {
+				// Simulate action if possible, adding to the priority queue
+				newWorldState, actionError = s.SimulateAction(startingState, country, otherCountry, action)
+				if actionError != nil {
+					_ = actionError
+				}
+			}
 		} else {
-			// Simulate action if possible, adding to the priority queue
-			newWorldState = s.SimulateActionIfPossible(startingState, country, nil, action)
+			// Only perform an action if the action does not already exist in the priority queue
+			actionId := fmt.Sprintf("%v | %v-%v", startingState.Id, action.GetName(), country.GetName())
+			if !s.States.CheckIfActionExists(actionId) {
+				// Simulate action if possible, adding to the priority queue
+				newWorldState, actionError = s.SimulateAction(startingState, country, nil, action)
+				if actionError != nil {
+					_ = actionError
+				}
+			}
 		}
-		// Next, recursively call SimulateAllActionsFromState so that we populate the priority queue in a depth-first manner
-		s.SimulateAllActionsFromState(actionMap, countryMap, newWorldState, depth+1)
+
+		if actionError == nil {
+			// Next, recursively call SimulateAllActionsFromState so that we populate the priority queue in a depth-first manner
+			s.SimulateAllActionsFromState(actionMap, countryMap, newWorldState, depth+1)
+		} else {
+			//fmt.Println(actionError)
+		}
 	}
+
+	return len(s.States) >= s.MaxSize
 }
 
 // SimulateActionIfPossible will perform an action against a simulated (duplicated) copy of the world
@@ -129,10 +180,10 @@ func (s *Simulator) SimulateAction(ws *WorldState,
 	action scheduler.ScheduleAction) (*WorldState, error) {
 
 	// Duplicate the state of the world
-	sim := make(map[string]*countries.Country)
+	sim := make(map[string]scheduler.Country)
 
-	for key, country := range ws.SimulatedCountries {
-		sim[key] = country.Duplicate()
+	for key, c := range ws.SimulatedCountries {
+		sim[key] = c.Duplicate()
 	}
 
 	newCountry := sim[country.GetName()]
@@ -148,19 +199,35 @@ func (s *Simulator) SimulateAction(ws *WorldState,
 	}
 
 	// Retrieve the Quality Scores
-	// TODO: Enhance this by having the correct score. For now, just use the gondor quality rating
-	for _, country := range sim {
-		country.SetQualityRating(quality.PerformQualityCalculation(country))
+	for _, countrySim := range sim {
+		countrySim.SetQualityRating(quality.PerformQualityCalculation(countrySim))
+		countrySim.SetUndiscountedReward(quality.CalculateUndiscountedReward(countrySim))
+		countrySim.SetDiscountedReward(quality.CalculateDiscountedReward(countrySim,
+			s.MaxDepth-ws.Generation+1))
 	}
+
+	// This ID is used for uniqueness, but it's only concern with the previous state, the action, and the country
+	// performing the action. If there's a second country for a transfer, then it doesn't make a significant enough
+	// difference to warrant being considered a "unique" state for world quality
+	//     - This is because country A transferring to country B is almost identical in the calculation to country A
+	//		 transferring the same resource+amount to country C
+	ID := fmt.Sprintf("%v | %v-%v", ws.Id, action.GetName(), country.GetName())
 
 	// Push WorldState to priority queue
 	newWorldState := &WorldState{
 		SimulatedCountries: sim,
 		PreviousState:      ws,
-		WorldValue:         sim["Gondor"].GetQualityRating(),
 		Generation:         ws.Generation + 1,
 		Index:              0,
+		Id:                 ID,
+		Action: scheduler.ScheduledAction{
+			Action:       action,
+			ThisCountry:  country,
+			OtherCountry: otherCountry,
+		},
 	}
+
+	newWorldState.CalculateExpectedUtility(s.InitialDepth)
 
 	//fmt.Printf("Adding World Value %v\n", newWorldState.WorldValue)
 	// Init heap if this is the first time that the priority queue is being pushed to
@@ -187,28 +254,20 @@ func (s *Simulator) SimulateAction(ws *WorldState,
 	return newWorldState, nil
 }
 
-//func (s *Simulator) PrintWorldStates() {
-//	for _, worldState := range s.States {
-//		fmt.Println("***** Gondor resources *****")
-//		worldState.SimulatedCountries["Gondor"].Print()
-//		fmt.Println("***** Rohan resources *****")
-//		worldState.SimulatedCountries["Rohan"].Print()
-//		fmt.Printf("generation: %v\nWorldValue: %v\n\n", worldState.Generation, worldState.WorldValue)
-//	}
-//}
-
-// TODO: Will also need a way to dump the entire priority queue and rebuild
-//  - Maybe rebuild based off of the biggest jumps in value?
-
 // GetTopNLeaves will return the top leaves from the priority queue, as well as all previous nodes of these leaves
 //  We will be refreshing the priority queue at this point so popping is okay
-func (s *Simulator) GetTopNLeaves(num int, startingGeneration int) ([]*WorldState, map[string]*WorldState) {
-	topStates := make([]*WorldState, num)
-	retStates := make(map[string]*WorldState)
+func (s *Simulator) GetTopNLeaves(num int, startingGeneration int) (map[int]*WorldState, map[int]WorldStates, int) {
+	topStates := make(map[int]*WorldState)
+	backupStates := make(map[int]WorldStates)
 	//states := s.States
 
+	topLevel := make(WorldStates, num)
+
+	// Maintain a count of states that we're saving
+	count := 0
+
 	i := 0
-	for i < num {
+	for i < num && len(s.States) > 0 {
 		// Pop Top State
 		state := heap.Pop(&s.States).(*WorldState)
 
@@ -216,10 +275,22 @@ func (s *Simulator) GetTopNLeaves(num int, startingGeneration int) ([]*WorldStat
 		if state.Generation == s.MaxDepth {
 			// Add leaf to the retStates list
 			topStates[i] = state
-			retStates[fmt.Sprintf("%v - %v", state.Index, state.WorldValue)] = state
+
+			// Also add this to the priority queue for the max depth
+			topLevel[i] = state
+
 			i++
+			count++
 		}
 	}
+
+	// Error condition that all states might pop out before enough top states are found
+	if len(s.States) == 0 {
+		topLevel = topLevel[:i]
+	}
+
+	heap.Init(&topLevel)
+	backupStates[s.MaxDepth] = topLevel
 
 	// Get all generations back from these states for when we rebuild the priority queue
 	for _, state := range topStates {
@@ -227,33 +298,81 @@ func (s *Simulator) GetTopNLeaves(num int, startingGeneration int) ([]*WorldStat
 		for i > startingGeneration {
 			i--
 			saveState := state.GetGeneration(i)
-			retStates[fmt.Sprintf("%v - %v", saveState.Index, saveState.WorldValue)] = saveState
+
+			// Add this state to the backupStates
+			// If the backupStates for this generation isn't initialize, then init
+			if _, found := backupStates[saveState.Generation]; !found {
+				newWorldStates := make(WorldStates, 1)
+				newWorldStates[0] = saveState
+				heap.Init(&newWorldStates)
+				backupStates[saveState.Generation] = newWorldStates
+				count++
+			} else {
+				// Check if state already exists in the WorldStates
+				if !backupStates[saveState.Generation].CheckIfActionExists(state.Id) {
+					newWorldStates := make(WorldStates, len(backupStates[saveState.Generation])+1)
+					copy(newWorldStates, backupStates[saveState.Generation])
+					newWorldStates[len(newWorldStates)-1] = saveState
+					heap.Push(&newWorldStates, saveState)
+					backupStates[saveState.Generation] = newWorldStates
+					count++
+				}
+			}
+
 		}
 	}
 
-	return topStates, retStates
+	return topStates, backupStates, count
 }
 
 // FlushQueue will empty out the priority queue of all states
 func (s *Simulator) FlushQueue() {
-	s.States = make([]*WorldState, 0)
-	heap.Init(&s.States)
+	for len(s.States) > 0 {
+		heap.Pop(&s.States)
+	}
 }
 
-// RebuildQueue will rebuild the priority queue after a refresh
-func (s *Simulator) RebuildQueue(topStates []*WorldState) {
+// InitializePriorityQueue will rebuild the priority queue after a refresh
+func (s *Simulator) InitializePriorityQueue(topStates []*WorldState) {
 	s.States = topStates
 	heap.Init(&s.States)
 }
 
-// WorldState contains a state of all countries in the world
+// ConvertToWorldStates will return a WorldStates pointer based on a countryMap passed in
+func ConvertToWorldStates(countryMap map[string]scheduler.Country) WorldStates {
+	// Duplicate the state of the world
+	sim := make(map[string]scheduler.Country)
+
+	for key, country := range countryMap {
+		sim[key] = country.Duplicate()
+	}
+
+	ID := "Initial State"
+
+	// Push WorldState to priority queue
+	newWorldState := &WorldState{
+		SimulatedCountries: sim,
+		PreviousState:      nil,
+		Generation:         0,
+		Index:              -1,
+		Id:                 ID,
+		ExpectedUtility:    0,
+	}
+
+	return []*WorldState{newWorldState}
+}
+
+// WorldState contains a state of all countries in the world, and represents a potential schedule
 type WorldState struct {
-	SimulatedCountries map[string]*countries.Country
+	SimulatedCountries map[string]scheduler.Country
 	PreviousState      *WorldState
-	//NextState          *WorldState
-	WorldValue float64
-	Generation int
-	Index      int
+	Action             scheduler.ScheduledAction
+	WorldValue         float64
+	SuccessProbability float64
+	ExpectedUtility    float64
+	Generation         int
+	Index              int
+	Id                 string
 }
 
 // GetGeneration returns the PreviousState with num Generation value
@@ -268,8 +387,120 @@ func (ws *WorldState) GetGeneration(num int) *WorldState {
 	return &state
 }
 
+//// GenerateWorldQualityRating will set the WorldValue for a WorldState
+//func (ws *WorldState) GenerateWorldQualityRating() float64 {
+//	// TODO: Calculate Undiscounted Reward
+//
+//	// TODO: Calculate Discounted Reward
+//
+//	// TODO: Calculate Success Probability
+//
+//	// TODO: Calculate Expected Utility
+//
+//	ws.WorldValue = ws.SimulatedCountries["Gondor"].GetQualityRating()
+//	return ws.WorldValue
+//}
+
+// GenerateProbabilityOfSuccess will return a number between 0 and 1 with the success likelihood of this schedule
+func (ws *WorldState) GenerateProbabilityOfSuccess(originalGeneration int) {
+	successOdds := 1.0
+
+	// Get each country involved in the schedule
+	countryNames := make(map[string]interface{})
+	states := ws
+	for states.Generation >= originalGeneration {
+		if states.Generation != 0 {
+			break
+		}
+
+		countryNames[states.Action.ThisCountry.GetName()] = 0
+		if states.Action.OtherCountry != nil {
+			countryNames[states.Action.OtherCountry.GetName()] = 0
+		}
+
+		states = states.PreviousState
+	}
+
+	logisticRegressions := make([]float64, len(countryNames))
+
+	i := 0
+	// Iterate over each country
+	for name, _ := range countryNames {
+
+		// Perform a Logistic function to generate success probability
+		lr := -K * (ws.SimulatedCountries[name].GetDiscountedReward() - X0)
+		lr = 1 + math.Exp(lr)
+
+		lr = L / lr
+
+		logisticRegressions[i] = lr
+		i++
+	}
+
+	// Get the product of the individual probabilities
+	for _, lr := range logisticRegressions {
+		successOdds *= lr
+	}
+
+	ws.SuccessProbability = successOdds
+}
+
+// CalculateExpectedUtility will calculate the ExpectedUtility of this schedule
+func (ws *WorldState) CalculateExpectedUtility(originalGeneration int) {
+	ws.GenerateProbabilityOfSuccess(originalGeneration)
+
+	// Expected Utility is the Product of the success probability and the discounted reward of the self
+	// country, summed together with the cost of the schedule failing
+
+	// Get the self country's discounted reward
+	selfCountry, err := countries.GetSelf(ws.SimulatedCountries)
+	if err != nil {
+		panic(err)
+	}
+
+	discountedReward := selfCountry.GetDiscountedReward()
+
+	// Multiply by the success probability
+	successValue := discountedReward * ws.SuccessProbability
+
+	// Calculate the cost of failure
+	failureValue := (1 - ws.SuccessProbability) * scheduler.FailureConstant
+
+	// Add the two values
+	ws.ExpectedUtility = successValue + failureValue
+
+}
+
+func (ws *WorldState) ToString() string {
+	str := ""
+	state := ws
+	// TODO need to work my way up here
+	for state.Generation > 0 {
+		if state.Generation == 1 {
+			str = fmt.Sprintf(" %s EU: %v\n%s", state.Action.ToString(), state.ExpectedUtility, str)
+		} else {
+			str = fmt.Sprintf("  %s EU: %v\n%s", state.Action.ToString(), state.ExpectedUtility, str)
+		}
+		state = state.PreviousState
+	}
+	str = fmt.Sprintf("[%s\n]\n\n", str)
+
+	return str
+}
+
 // WorldStates is the type needed for the priority queue
 type WorldStates []*WorldState
+
+// CheckIfActionExists will return true if the action is already found in the WorldStates list
+func (ws WorldStates) CheckIfActionExists(Id string) bool {
+	for _, state := range ws {
+		if Id == state.Id {
+			return true
+		}
+	}
+
+	return false
+}
 
 // Len is implemented for the sort interface
 func (ws WorldStates) Len() int {
@@ -287,7 +518,7 @@ func (ws WorldStates) Swap(i, j int) {
 // Less implementation is for the sort interface
 func (ws WorldStates) Less(i, j int) bool {
 	//fmt.Printf("Comparing %v >= %v: result is %v\n", ws[i].WorldValue, ws[j].WorldValue, ws[i].WorldValue >= ws[j].WorldValue)
-	return ws[i].WorldValue >= ws[j].WorldValue
+	return ws[i].ExpectedUtility >= ws[j].ExpectedUtility
 }
 
 // Push implementation is for the priority queue / heap interface

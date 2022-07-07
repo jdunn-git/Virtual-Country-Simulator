@@ -1,0 +1,7 @@
+Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-0.5,76.30127946177186,10.175672033333333,3
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-1,86.83022414072802,10.177735266666668,3
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-1.5,79.01031496338716,10.205439533333333,3
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-2,79.0975220195815,10.181231066666667,3
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-2.5,82.01940346768302,10.163665700000001,3
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-3,83.57981017055063,10.1632898,3

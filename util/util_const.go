@@ -4,7 +4,7 @@ const (
 	TransformType string = "Transform"
 	TransferType         = "Transfer"
 
-	FailedConstant float64 = -0.05
+	FailureCost float64 = -0.05
 
 	// Gamma is a rate of change for the Discounted reward at each step.
 	//  This is just an initial value

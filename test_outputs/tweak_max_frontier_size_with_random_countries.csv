@@ -1,0 +1,11 @@
+Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,50,22.941360788928655,10.096019633333333,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,100,29.904088387655023,10.093557333333333,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,150,45.87796622696954,10.1516138,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,200,57.38189261087707,10.1500455,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,250,57.232903911704724,10.152813933333332,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,300,62.35308408758399,10.183021133333334,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,350,66.92611949340193,10.206028466666666,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,400,69.35903980932522,10.2151379,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,450,71.64347829707665,10.254400666666667,3
+TweakFrontierMaxSizeWithRandomCountries,inputs/countries_random.csv,FrontierMaxSize,500,73.6175448473558,10.2297599,3

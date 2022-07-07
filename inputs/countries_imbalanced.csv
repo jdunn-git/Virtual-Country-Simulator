@@ -1,0 +1,7 @@
+Country,Population,MetallicElements,Timber,AvailableLand,MetallicAlloys,MetallicAlloysWaste,Electronics,ElectronicsWaste,Housing,HousingWaste,Farm,FarmWaste,Food,FoodWaste,Military,MilitaryWaste
+Gondor,10000,400,500,900,600,250,200,150,600,200,450,150,300,50,1000,600
+Rohan,5000,200,400,1500,400,200,100,30,600,150,700,200,600,200,800,600
+The Shire,8000,100,600,200,50,30,50,50,300,20,600,100,800,250,0,0
+Rivendell,500,200,300,50,200,20,100,0,50,0,150,50,400,50,200,50
+Mirkwood,800,300,1000,400,200,50,300,50,400,100,300,75,600,100,400,150
+Erebor,2500,1000,200,100,800,150,300,100,100,20,50,0,300,50,500,400

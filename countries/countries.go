@@ -8,18 +8,23 @@ import (
 
 // Country struct is used to store all information about a country
 type Country struct {
-	Name         string
-	ResourcesMap map[string]*resources.CountryResource
-	Quality      float64
-	Self         bool
+	Name               string
+	ResourcesMap       map[string]*resources.CountryResource
+	Self               bool
+	Quality            float64
+	DiscountedReward   float64 // Tracked her for the simulated states
+	UndiscountedReward float64 // Tracked her for the simulated states
 }
 
 // NewCountry will construct a new Country pointer
 func NewCountry(name string, countryResources []*resources.CountryResource, self bool) *Country {
 	c := &Country{
-		Name:         name,
-		ResourcesMap: make(map[string]*resources.CountryResource),
-		Self:         self,
+		Name:               name,
+		ResourcesMap:       make(map[string]*resources.CountryResource),
+		Self:               self,
+		DiscountedReward:   0.0,
+		UndiscountedReward: 0.0,
+		Quality:            0.0,
 	}
 
 	for _, res := range countryResources {
@@ -33,14 +38,19 @@ func NewCountry(name string, countryResources []*resources.CountryResource, self
 }
 
 // GetSelf can be used to get the "self" country
-func GetSelf(countriesMap map[string]*Country) (*Country, error) {
+func GetSelf(countriesMap map[string]scheduler.Country) (scheduler.Country, error) {
 	for _, country := range countriesMap {
-		if country.Self {
+		if country.GetSelf() {
 			return country, nil
 		}
 	}
 
-	return &Country{}, fmt.Errorf("there was no \"self\" country")
+	return nil, fmt.Errorf("there was no \"self\" country")
+}
+
+// GetSelf will return the Self value of this country
+func (c *Country) GetSelf() bool {
+	return c.Self
 }
 
 // GetName will return the Name of this country
@@ -56,6 +66,26 @@ func (c *Country) GetQualityRating() float64 {
 // SetQualityRating will set the Quality of this country
 func (c *Country) SetQualityRating(quality float64) {
 	c.Quality = quality
+}
+
+// GetDiscountedReward will get the DiscountedReward of this country
+func (c *Country) GetDiscountedReward() float64 {
+	return c.DiscountedReward
+}
+
+// SetDiscountedReward will set the DiscountedReward of this country
+func (c *Country) SetDiscountedReward(reward float64) {
+	c.DiscountedReward = reward
+}
+
+// GetUndiscountedReward will get the UndiscountedReward of this country
+func (c *Country) GetUndiscountedReward() float64 {
+	return c.UndiscountedReward
+}
+
+// SetUndiscountedReward will set the UndiscountedReward of this country
+func (c *Country) SetUndiscountedReward(reward float64) {
+	c.UndiscountedReward = reward
 }
 
 // GetResourceAmount will return the amount this country has of the passed in resource
@@ -87,18 +117,21 @@ func (c *Country) AdjustResource(resourceName string, adjustment int) {
 }
 
 // Duplicate will return an identical copy to this Country
-func (c *Country) Duplicate() *Country {
+func (c *Country) Duplicate() scheduler.Country {
 	duplicatedResourcesMap := make(map[string]*resources.CountryResource)
 
 	for key, resource := range c.ResourcesMap {
 		duplicatedResourcesMap[key] = resource.Duplicate()
 	}
 
-	return &Country{
+	newCountry := &Country{
 		Name:         c.Name,
 		ResourcesMap: duplicatedResourcesMap,
 		Quality:      c.Quality,
+		Self:         c.Self,
 	}
+
+	return newCountry
 }
 
 // Transform will transform this country's resources according to the inputs and outputs
@@ -134,7 +167,7 @@ func (c *Country) Transfer(otherCountry scheduler.Country, resource scheduler.Ac
 
 	// Validate that there is enough of the resource
 	if c.GetResourceAmount(resource.Name) < resource.Amount {
-		return fmt.Errorf("%s did not have enough %s to transfer for %s. Had %v, Needs %v",
+		return fmt.Errorf("%s did not have enough %s  transfer to %s. Had %v, Needs %v",
 			c.Name, resource.Name, otherCountry.GetName(), c.GetResourceAmount(resource.Name), resource.Amount)
 	}
 

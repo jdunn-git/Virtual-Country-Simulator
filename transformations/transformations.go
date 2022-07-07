@@ -36,6 +36,11 @@ func (t Transformation) GetType() string {
 	return t.Type
 }
 
+// GetName returns the name of this action
+func (t Transformation) GetName() string {
+	return t.Name
+}
+
 // InitializeTransformations will initialize the map of Transformations
 func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	transformationMap := make(map[string]scheduler.ScheduleAction)
@@ -237,4 +242,30 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 	}
 
 	return transformationMap
+}
+
+func (t Transformation) ToString(country scheduler.Country, otherCountry scheduler.Country) string {
+	str := fmt.Sprintf("(TRANSFORM self\n\t(INPUTS  ")
+
+	for i, input := range t.Inputs {
+		str = fmt.Sprintf("%s(%s %v)", str, input.Name, input.Amount)
+
+		if i < len(t.Inputs)-1 {
+			str = fmt.Sprintf("%s\n\t         ", str)
+		}
+	}
+
+	str = fmt.Sprintf("%s\n\t(OUTPUTS ", str)
+
+	for i, output := range t.Outputs {
+		str = fmt.Sprintf("%s(%s %v)", str, output.Name, output.Amount)
+
+		if i < len(t.Outputs)-1 {
+			str = fmt.Sprintf("%s\n\t         ", str)
+		}
+	}
+
+	str = fmt.Sprintf("%s))", str)
+
+	return str
 }

@@ -1,12 +1,14 @@
 package quality
 
 import (
-	"CS5260_Final_Project/countries"
+	"CS5260_Final_Project/scheduler"
 	"math"
 )
 
+var Gamma float64
+
 // PerformQualityCalculation will generate a quality rating for a country
-func PerformQualityCalculation(country *countries.Country) float64 {
+func PerformQualityCalculation(country scheduler.Country) float64 {
 
 	// Get the raw materials
 	population := float64(country.GetResourceAmount("Population"))
@@ -41,18 +43,18 @@ func PerformQualityCalculation(country *countries.Country) float64 {
 	metalsQuality := (metallicAlloys * metallicAlloysWeight) + (metallicAlloysWaste * metallicAlloysWasteWeight)
 
 	// Partial Quality - Land
-	landQuality := (math.Pow((farm*farmWeight), 2) + (farmWaste * farmWasteWeight)) / availableLand
+	landQuality := (math.Pow(farm*farmWeight, 2) + (farmWaste * farmWasteWeight)) / availableLand
 
 	// Partial Quality - Military
 	militaryQuality := ((military * militaryWeight) + (militaryWaste * militaryWasteWeight)) / (population * 0.2)
 
 	// Multiple each by 10 since they're all low typically - higher values make for a more interesting simulation
-	foodQuality *= 10
-	housingQuality *= 10
-	electronicsQuality *= 10
-	metalsQuality *= 10
-	landQuality *= 10
-	militaryQuality *= 10
+	foodQuality *= 100
+	housingQuality *= 100
+	electronicsQuality *= 100
+	metalsQuality *= 100
+	landQuality *= 100
+	militaryQuality *= 100
 
 	/*
 		fmt.Printf("foodQuality: %v\n", foodQuality)
@@ -66,4 +68,19 @@ func PerformQualityCalculation(country *countries.Country) float64 {
 	// Final Quality Calculation
 	return (foodQuality * 1.00) + (housingQuality * .3) + (electronicsQuality * .15) + (metalsQuality * .15) +
 		(landQuality * .20) + (militaryQuality * .50)
+}
+
+// CalculateUndiscountedReward will calculate the undiscounted reward for a Country. This is equivalent to:
+//   newQuality - originalQuality
+func CalculateUndiscountedReward(countryNew scheduler.Country) float64 {
+	newQuality := countryNew.GetQualityRating()
+	originalQuality := scheduler.CountriesMap[countryNew.GetName()].GetQualityRating()
+	return newQuality - originalQuality
+}
+
+// CalculateDiscountedReward will calculate the discounted reward for a Country. This is equivalent to:
+//   undiscountedReward * Gamma^n
+func CalculateDiscountedReward(country scheduler.Country, num int) float64 {
+	undiscountedReward := country.GetUndiscountedReward()
+	return undiscountedReward * math.Pow(Gamma, float64(num))
 }

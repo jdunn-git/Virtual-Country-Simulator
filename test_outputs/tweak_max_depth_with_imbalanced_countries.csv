@@ -1,0 +1,9 @@
+Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,3,53.03081241288853,10.197516,3
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,4,58.407612386440256,10.1653609,3
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,5,68.42932373402174,10.1798564,3
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,6,78.95759148583973,10.1943132,3
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,7,87.27209226996307,10.1946399,3
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,8,96.16629593794929,10.1613595,3
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,9,106.07853655035788,10.177485666666668,3
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,10,115.14601408641312,10.188261933333333,3

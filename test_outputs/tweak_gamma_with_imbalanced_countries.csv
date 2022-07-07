@@ -1,0 +1,6 @@
+Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
+TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.2,14.451828019472186,10.172564766666666,3
+TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.4,29.956664208562113,10.1932486,3
+TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.6000000000000001,54.756946401922875,10.178176633333333,3
+TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.8,95.58201288429196,10.185267733333333,3
+TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,1,145.50195136689678,10.178864299999999,3

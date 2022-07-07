@@ -1,0 +1,170 @@
+***************************  Round 25  ***************************
+Depth bound this round: 29
+Frontier size: 400
+Top schedules count: 5
+Schedules:
+
+[ (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 0.5859375
+  (TRANSFER "Erebor" self ((ElectronicsWaste 10)))) EU: 0
+  (TRANSFER self "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.4687500069849193
+  (TRANSFER self "Rohan" ((Food 10)))) EU: 0.9251253076845387
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 20.600250615369077
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 29.975250615369077
+  (TRANSFER self "The Shire" ((FoodWaste 10)))) EU: 39.35334429194063
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 56.22834426400095
+  (TRANSFER "The Shire" self ((MetallicAlloys 10)))) EU: 75.00309367657155
+  (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 65.62809367657155
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 69.37809457064122
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 95.62500268220901
+  (TRANSFER self "The Shire" ((ElectronicsWaste 10)))) EU: 95.62500268220901
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 88.12500089406967
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((Electronics 10)))) EU: 108.75000357627869
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 112.50000447034836
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 108.75000357627869
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 101.25000178813934
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 101.25000178813934
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 101.25000178813934
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 101.25000178813934
+  (TRANSFER "Mirkwood" self ((Timber 10)))) EU: 82.50000178813934
+
+]
+
+[ (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 0.5859375
+  (TRANSFER "Erebor" self ((ElectronicsWaste 10)))) EU: 0
+  (TRANSFER self "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.4687500069849193
+  (TRANSFER self "Rohan" ((Food 10)))) EU: 0.9251253076845387
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 20.600250615369077
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 29.975250615369077
+  (TRANSFER self "The Shire" ((FoodWaste 10)))) EU: 39.35334429194063
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 56.22834426400095
+  (TRANSFER "The Shire" self ((MetallicAlloys 10)))) EU: 75.00309367657155
+  (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 65.62809367657155
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 69.37809457064122
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 95.62500268220901
+  (TRANSFER self "The Shire" ((ElectronicsWaste 10)))) EU: 95.62500268220901
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 88.12500089406967
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((Electronics 10)))) EU: 108.75000357627869
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 112.50000447034836
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 108.75000357627869
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 105.00000268220901
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 105.00000268220901
+  (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 88.12500089406967
+  (TRANSFER "Erebor" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 95.62500268220901
+
+]
+
+[ (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 0.5859375
+  (TRANSFER "Erebor" self ((ElectronicsWaste 10)))) EU: 0
+  (TRANSFER self "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.4687500069849193
+  (TRANSFER self "Rohan" ((Food 10)))) EU: 0.9251253076845387
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 20.600250615369077
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 29.975250615369077
+  (TRANSFER self "The Shire" ((FoodWaste 10)))) EU: 39.35334429194063
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 56.22834426400095
+  (TRANSFER "The Shire" self ((MetallicAlloys 10)))) EU: 75.00309367657155
+  (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 65.62809367657155
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 69.37809457064122
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 95.62500268220901
+  (TRANSFER self "The Shire" ((ElectronicsWaste 10)))) EU: 95.62500268220901
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 88.12500089406967
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((Electronics 10)))) EU: 108.75000357627869
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 112.50000447034836
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 108.75000357627869
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 105.00000268220901
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 105.00000268220901
+  (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 88.12500089406967
+  (TRANSFER "Erebor" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+
+]
+
+[ (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 0.5859375
+  (TRANSFER "Erebor" self ((ElectronicsWaste 10)))) EU: 0
+  (TRANSFER self "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.4687500069849193
+  (TRANSFER self "Rohan" ((Food 10)))) EU: 0.9251253076845387
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 20.600250615369077
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 29.975250615369077
+  (TRANSFER self "The Shire" ((FoodWaste 10)))) EU: 39.35334429194063
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 56.22834426400095
+  (TRANSFER "The Shire" self ((MetallicAlloys 10)))) EU: 75.00309367657155
+  (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 65.62809367657155
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 69.37809457064122
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 95.62500268220901
+  (TRANSFER self "The Shire" ((ElectronicsWaste 10)))) EU: 95.62500268220901
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 88.12500089406967
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((Electronics 10)))) EU: 108.75000357627869
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 112.50000447034836
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 108.75000357627869
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 101.25000178813934
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 101.25000178813934
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 101.25000178813934
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 101.25000178813934
+  (TRANSFORM self
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 84.18750178534538
+
+]
+
+[ (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 0.5859375
+  (TRANSFER "Erebor" self ((ElectronicsWaste 10)))) EU: 0
+  (TRANSFER self "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.4687500069849193
+  (TRANSFER self "Rohan" ((Food 10)))) EU: 0.9251253076845387
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 20.600250615369077
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 29.975250615369077
+  (TRANSFER self "The Shire" ((FoodWaste 10)))) EU: 39.35334429194063
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 56.22834426400095
+  (TRANSFER "The Shire" self ((MetallicAlloys 10)))) EU: 75.00309367657155
+  (TRANSFER self "Erebor" ((ElectronicsWaste 10)))) EU: 65.62809367657155
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 69.37809457064122
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 95.62500268220901
+  (TRANSFER self "The Shire" ((ElectronicsWaste 10)))) EU: 95.62500268220901
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 91.87500178813934
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 88.12500089406967
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Rivendell" self ((Electronics 10)))) EU: 91.87500178813934
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((Electronics 10)))) EU: 108.75000357627869
+  (TRANSFER "Mirkwood" self ((Electronics 10)))) EU: 112.50000447034836
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 108.75000357627869
+  (TRANSFER "Rohan" self ((MetallicAlloys 10)))) EU: 105.00000268220901
+  (TRANSFER "Erebor" self ((MetallicAlloys 10)))) EU: 101.25000178813934
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 101.25000178813934
+  (TRANSFER "The Shire" self ((Electronics 10)))) EU: 101.25000178813934
+  (TRANSFER "Rivendell" self ((MetallicAlloys 10)))) EU: 101.25000178813934
+  (TRANSFER "Erebor" self ((Food 10)))) EU: 82.52475120070994
+
+]
