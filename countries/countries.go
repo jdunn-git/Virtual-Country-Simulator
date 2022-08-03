@@ -1,6 +1,7 @@
 package countries
 
 import (
+	"CS5260_Final_Project/manager"
 	"CS5260_Final_Project/resources"
 	"CS5260_Final_Project/scheduler"
 	"fmt"
@@ -14,6 +15,8 @@ type Country struct {
 	Quality            float64
 	DiscountedReward   float64 // Tracked her for the simulated states
 	UndiscountedReward float64 // Tracked her for the simulated states
+	RecvChan           chan manager.Schedule
+	SendChan           chan manager.Schedule
 }
 
 // NewCountry will construct a new Country pointer
@@ -25,6 +28,7 @@ func NewCountry(name string, countryResources []*resources.CountryResource, self
 		DiscountedReward:   0.0,
 		UndiscountedReward: 0.0,
 		Quality:            0.0,
+		SendChan:           make(chan manager.Schedule),
 	}
 
 	for _, res := range countryResources {
@@ -56,6 +60,11 @@ func (c *Country) GetSelf() bool {
 // GetName will return the Name of this country
 func (c *Country) GetName() string {
 	return c.Name
+}
+
+// GetSendChan will return the SendChan of this country
+func (c *Country) GetSendChan() chan manager.Schedule {
+	return c.SendChan
 }
 
 // GetQualityRating will return the Quality of this country
@@ -177,4 +186,25 @@ func (c *Country) Transfer(otherCountry scheduler.Country, resource scheduler.Ac
 	otherCountry.AdjustResource(resource.Name, resource.Amount)
 
 	return nil
+}
+
+// ProposeSchedule will send a schedule proposal on an interface and block until a schedule to execute is received
+func (c *Country) ProposeSchedule(actions []scheduler.ScheduledAction, state manager.SimulatedWorldState) ([]scheduler.ScheduledAction, manager.SimulatedWorldState, error) {
+	if c.RecvChan == nil {
+		return nil, nil, fmt.Errorf("no channel registered with game manager")
+	}
+	proposedSchedule := manager.Schedule{
+		Actions:         actions,
+		State:           state,
+		ProposedCountry: c,
+	}
+
+	c.SendChan <- proposedSchedule
+	retSchedule := <-c.RecvChan
+	return retSchedule.Actions, retSchedule.State, nil
+}
+
+// RegisterRecvChan will register the game manager send channel with this country
+func (c *Country) RegisterRecvChan(recvChan chan manager.Schedule) {
+	c.RecvChan = recvChan
 }

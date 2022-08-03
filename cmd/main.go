@@ -2,6 +2,7 @@ package main
 
 import (
 	"CS5260_Final_Project/countries"
+	"CS5260_Final_Project/manager"
 	"CS5260_Final_Project/quality"
 	"CS5260_Final_Project/resources"
 	"CS5260_Final_Project/scheduler"
@@ -17,6 +18,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -27,9 +29,14 @@ func (se stateEntry) Len() int           { return len(se) }
 func (se stateEntry) Less(i, j int) bool { return se[i] > se[j] }
 func (se stateEntry) Swap(i, j int)      { se[i], se[j] = se[j], se[i] }
 
-func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
-	outputSchduleFilename string, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate int,
+var wg sync.WaitGroup
+
+func allCountrySchedulersWithGameManager(resourcesFilename, initialStateFilename, outputScheduleFilename,
+	proposedScheduleFilename string, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beams int,
 	constants Constants) TestRun {
+	// Initialize Game Manager
+	endChan := make(chan interface{})
+	gameManager := manager.InitializeGameManager(endChan, outputScheduleFilename, proposedScheduleFilename)
 
 	// Disburse Constants
 	quality.Gamma = constants.Gamma
@@ -49,11 +56,56 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 		FrontierMaxSize:       frontierMaxSize,
 		TopSchedulesEachRound: numOutputSchedules,
 		Constants:             constants,
-		SelfCountryName:       myCountryName,
+		SelfCountryName:       "All Countries",
 	}
 
+	timeStart := time.Now()
+
+	// Run each country as a separate go routine
+	for countryName, _ := range quality.CountryQualityWeightsMap {
+		wg.Add(1)
+		go myCountryScheduler(countryName, resourcesFilename, initialStateFilename, outputScheduleFilename,
+			numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beams, constants)
+		time.Sleep(1 * time.Second)
+		break
+	}
+	//go myCountryScheduler("Rohan", resourcesFilename, initialStateFilename, outputScheduleFilename,
+	//	numOutputSchedulesInt, depthBoundInt, frontierMaxSizeInt, roundsToSimulateInt, beamCountInt, constants)
+	//time.Sleep(1 * time.Second)
+	// TODO will need to run the manager to listen for countries and schedules each round. Can control rounds here?
+	fmt.Printf("Waiting for countries to finish\n")
+
+	// Run the Game Manager
+	fmt.Printf("Started the game manager\n")
+	run.AverageQualityDelta = gameManager.Run(roundsToSimulate)
+
+	// Wait for all countries to terminate
+	wg.Wait()
+	fmt.Printf("Done waiting for countries to finish\n")
+
+	run.MaxDepthAllRounds = depthBound
+	run.Time = time.Since(timeStart)
+
+	//endChan <- 0
+	fmt.Printf("Closed the game manager\n")
+
+	return run
+}
+
+func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
+	outputScheduleFilename string, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beams int,
+	constants Constants) {
+
+	// Close the waitgroup for this country whenever this process terminates
+	defer wg.Done()
+	//return TestRun{}
+
+	selfCountry := &countries.Country{}
+
 	resourcesMap := make(map[string]*resources.Resource)
-	scheduler.CountriesMap = make(map[string]scheduler.Country)
+	countryScheduler := &scheduler.CountryScheduler{
+		CountriesMap: make(map[string]scheduler.Country),
+	}
 
 	// Import resources
 	lines, err := ReadCsv(resourcesFilename)
@@ -61,6 +113,8 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 		panic(err)
 	}
 
+	resourceNameList := make([]string, len(lines)-1)
+	resourceCount := 0
 	for _, line := range lines {
 		// Skip the header line
 		if line[0] == "Resource" {
@@ -75,6 +129,8 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 		}
 
 		resourcesMap[resourceName] = resources.NewResource(resourceName, float32(weight), false)
+		resourceNameList[resourceCount] = resourceName
+		resourceCount++
 	}
 
 	// Import countries
@@ -117,7 +173,14 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 		newCountry := countries.NewCountry(countryName, countryResources, self)
 		newCountry.SetQualityRating(quality.PerformQualityCalculation(newCountry))
 
-		scheduler.CountriesMap[countryName] = newCountry
+		// If this country is "self" for its instance, then register with the game manager
+		if self {
+			man := manager.GetGameManager()
+			man.Register(newCountry, newCountry.GetSendChan())
+			selfCountry = newCountry
+		}
+
+		countryScheduler.CountriesMap[countryName] = newCountry
 	}
 
 	//for _, res := range resourcesMap {
@@ -162,10 +225,10 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 	nextGeneration := 1
 
 	// Perform multiple iterations for frontier
-	outputSchedules := 0
+	//outputSchedules := 0
 	//numOutputSchedules = 20 // Comes from params and can be removed
-	printedOutputScheduleCount := 0
-	numberOfTopLeaves := numOutputSchedules
+	//printedOutputScheduleCount := 0
+	//numberOfTopLeaves := numOutputSchedules
 
 	//depthBound = 3
 	//frontierMaxSize = 200
@@ -173,18 +236,32 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 	previousTopStates := make(map[int]simulator.WorldStates)
 	//simulatorStartingStates := make(map[int]*simulator.WorldState)
 
-	initialWorldState := simulator.ConvertToWorldStates(scheduler.CountriesMap)
+	initialWorldState := simulator.ConvertToWorldStates(countryScheduler.CountriesMap, resourceNameList)
 	heap.Init(&initialWorldState)
 	previousTopStates[0] = initialWorldState
 	//previousTopStates := initialWorldState
-	previousDepth := 0
+	//previousDepth := 0
 
-	timeStart := time.Now()
+	//var expectedUtilities []float64
+	round := 0
 
-	var expectedUtilities []float64
+	// Schedule the world in rounds
+	for round < roundsToSimulate {
+		//maxDepthThisRound := depthBound * (round + 1)
+		startingGeneration := 0
 
-	for currentGeneration < roundsToSimulate {
-		sim := simulator.InitializeSimulator(initialWorldState, frontierMaxSize, depthBound, currentGeneration)
+		if round == roundsToSimulate-1 {
+			_ = round
+		}
+
+		// Simulate the world for maxDepthThisRound times
+		sim := simulator.InitializeSimulator(countryScheduler.CountriesMap, initialWorldState, resourceNameList, frontierMaxSize, depthBound, startingGeneration)
+
+		//tmpQualityRating := sim.CountriesMap[selfCountry.GetName()].GetQualityRating()
+		//tmpUndiscountedReward := sim.CountriesMap[selfCountry.GetName()].GetUndiscountedReward()
+		//tmpDiscountedReward := sim.CountriesMap[selfCountry.GetName()].GetDiscountedReward()
+		//fmt.Printf("\tPre-simulation self.Quality: %v, self.UndiscountedReward: %v, self.DiscountedReward: %v\n",
+		//	tmpQualityRating, tmpUndiscountedReward, tmpDiscountedReward)
 
 		// Get all keys and sort
 		var stateKeys stateEntry
@@ -193,7 +270,7 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 		}
 		sort.Sort(stateKeys)
 
-		depth := previousDepth + 1
+		//depth := previousDepth + 1
 		full := false
 		// Grab the top branches from the states, then work backwards if there's more room
 		for _, key := range stateKeys {
@@ -202,42 +279,34 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 			//}
 			for _, state := range previousTopStates[key] {
 				// This will run the simulations to mock the schedules for each of the top states starting with the top
-				full = sim.SimulateAllActionsFromState(scheduler.AvailableActions, scheduler.CountriesMap, state, state.Generation)
-				if full {
-					break
-				}
-			}
-			if full {
-				break
+				full = sim.SimulateAllActionsFromState(scheduler.AvailableActions, countryScheduler.CountriesMap, state,
+					state.Generation, sim.MaxSize, beams, -1)
+				_ = full
 			}
 		}
 		//time.Sleep(time.Duration(500))
 
-		// Increment depth bound and update previous depth - this will ensure we're also the same distance from the max depth
-		// with each iteration of this loop
-		depthBound++
-		previousDepth = depth
+		//// Increment depth bound and update previous depth - this will ensure we're also the same distance from the max depth
+		//// with each iteration of this loop
+		//depthBound++
+		//previousDepth = depth
 
-		startingGeneration := depth
-		topStates, backupStatesMap, size := sim.GetTopNLeaves(numberOfTopLeaves, startingGeneration)
+		//startingGeneration := round * depthBound
+		bestState, _ := sim.GetTopLeaf()
+		//previousTopStates = backupStatesMap
+		//outputSchedules = 1
 
-		previousTopStates = backupStatesMap
-		outputSchedules += len(topStates)
-
-		sim.FlushQueue()
-		rebuildStates := make([]*simulator.WorldState, size)
-		i := 0
-		for _, backupStates := range backupStatesMap {
-			for _, state := range backupStates {
-				//fmt.Printf("Backup States (%v), index: %v, ExpectedUtility: %v\n", state.Generation, state.Index, state.ExpectedUtility)
-				state.Index = -1
-				rebuildStates[i] = state
-				i++
-			}
-		}
-
-		initialWorldState = rebuildStates
-		heap.Init(&initialWorldState)
+		//sim.FlushQueue()
+		//rebuildStates := make([]*simulator.WorldState, size)
+		//i := 0
+		//for _, backupStates := range backupStatesMap {
+		//	for _, state := range backupStates {
+		//		//fmt.Printf("Backup States (%v), index: %v, ExpectedUtility: %v\n", state.Generation, state.Index, state.ExpectedUtility)
+		//		state.Index = -1
+		//		rebuildStates[i] = state
+		//		i++
+		//	}
+		//}
 
 		//fmt.Println()
 		//sim.PrintWorldStates()
@@ -258,45 +327,64 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 		// TODD: Still need to go through this and correct the best value calculation
 
 		// Get the first action on the best simulated state
-		bestState := topStates[0]
-		bestAction := bestState.GetGeneration(nextGeneration).Action
-		bestAction.Action.Take(bestAction.ThisCountry, bestAction.OtherCountry)
+		//bestState := topStates[0]
+		//bestAction := bestState.GetGeneration(nextGeneration).Action
+		bestActions := bestState.GetAllActions()
+		//bestAction.Action.Take(bestAction.ThisCountry, bestAction.OtherCountry)
 
-		// Update the Quality score for the countries involved
-		scheduler.CountriesMap[bestAction.ThisCountry.GetName()].SetQualityRating(
-			quality.PerformQualityCalculation(bestAction.ThisCountry))
-		if bestAction.OtherCountry != nil {
-			scheduler.CountriesMap[bestAction.OtherCountry.GetName()].SetQualityRating(
-				quality.PerformQualityCalculation(bestAction.OtherCountry))
+		// PART TWO -- Instead of taking the best action, we will create a schedule and propose it, then take the responded action
+		actionsToTake, worldState, proposalErr := selfCountry.ProposeSchedule(bestActions, bestState)
+		if proposalErr != nil {
+			panic(proposalErr)
 		}
+
+		// Take the returned action
+		for _, action := range actionsToTake {
+			// Get the country names from the action, but be careful to take them on the countryScheduler for this
+			// country. If we use the country that's inside the action, then it will be the other country's instance
+			// of the countryScheduler
+			country1 := countryScheduler.CountriesMap[action.ThisCountry.GetName()]
+			var country2 scheduler.Country
+			if action.OtherCountry != nil {
+				country2 = countryScheduler.CountriesMap[action.OtherCountry.GetName()]
+			}
+			takeErr := action.Action.Take(country1, country2)
+			if takeErr != nil {
+				panic(takeErr)
+			}
+
+			// Update the Quality score for the countries involved
+			countryScheduler.CountriesMap[action.ThisCountry.GetName()].SetQualityRating(
+				quality.PerformQualityCalculation(action.ThisCountry))
+			if action.OtherCountry != nil {
+				countryScheduler.CountriesMap[action.OtherCountry.GetName()].SetQualityRating(
+					quality.PerformQualityCalculation(action.OtherCountry))
+			}
+		}
+
+		resultWorldStates := simulator.WorldStates{worldState.(*simulator.WorldState)}
+		previousTopStates[0] = resultWorldStates
+
+		// Construct rebuildStates with the state from the schedule
+		sim.FlushQueue()
+		rebuildStates := make([]*simulator.WorldState, 1)
+		//fmt.Printf("Backup States (%v), index: %v, ExpectedUtility: %v\n", state.Generation, state.Index, state.ExpectedUtility)
+		worldState.SetAsNewInitialState()
+		rebuildStates[0] = worldState.(*simulator.WorldState)
+
+		initialWorldState = rebuildStates
+		heap.Init(&initialWorldState)
 
 		// Increment to next generation
 		nextGeneration++
 		currentGeneration++
 		time.Sleep(1 * time.Second)
 
-		roundInformation := fmt.Sprintf("***************************  Round %v  ***************************",
-			currentGeneration)
-		roundInformation = fmt.Sprintf("%s\nDepth bound this round: %v\nFrontier size: %v\nTop "+
-			"schedules count: %v\nSchedules:\n\n", roundInformation, depthBound-1, frontierMaxSize, numOutputSchedules)
-		printToFile(outputSchduleFilename, roundInformation)
-
-		expectedUtilities = make([]float64, len(topStates))
-		// Print the top states for a check
-		for i, state := range topStates {
-			//if printedOutputScheduleCount > numOutputSchedules {
-			//	break
-			//}
-
-			expectedUtilities[i] = state.ExpectedUtility
-
-			//fmt.Println(state.ToString())
-			//time.Sleep(1 * time.Second)
-			//fmt.Println("**********")
-
-			printToFile(outputSchduleFilename, state.ToString())
-			printedOutputScheduleCount++
-		}
+		//roundInformation := fmt.Sprintf("***************************  Round %v  ***************************",
+		//	currentGeneration)
+		//roundInformation = fmt.Sprintf("%s\nDepth bound this round: %v\nFrontier size: %v\nTop "+
+		//	"schedules count: %v\nSchedules:\n\n", roundInformation, depthBound-1, frontierMaxSize, numOutputSchedules)
+		//printToFile(outputScheduleFilename, roundInformation)
 
 		//if printedOutputScheduleCount > numOutputSchedules {
 		//	break
@@ -306,13 +394,12 @@ func myCountryScheduler(myCountryName, resourcesFilename, initialStateFilename,
 		//if currentGeneration == roundsToSimulate {
 
 		//}
+
+		// Increment the round
+		round++
 	}
 
-	run.FinalExceptedUtilities = expectedUtilities
-	run.MaxDepthAllRounds = depthBound
-	run.Time = time.Since(timeStart)
-
-	return run
+	return
 }
 
 func printToFile(filename, data string) {
@@ -330,13 +417,13 @@ func printToFile(filename, data string) {
 }
 
 type TestRun struct {
-	Time                   time.Duration
-	DepthEachRound         int
-	NumberOfRounds         int
-	MaxDepthAllRounds      int
-	FrontierMaxSize        int
-	TopSchedulesEachRound  int
-	FinalExceptedUtilities []float64
+	Time                  time.Duration
+	DepthEachRound        int
+	NumberOfRounds        int
+	MaxDepthAllRounds     int
+	FrontierMaxSize       int
+	TopSchedulesEachRound int
+	AverageQualityDelta   float64
 
 	SelfCountryName string
 
@@ -361,10 +448,65 @@ type UntweakableConstants struct {
 	TransferType  string
 }
 
+// importQualityWeights will read in quality weights for each country from filename, and will store the weights into the
+// quality package CountryQualityWeightsMap. This is done one time for all goroutines to use, so it's a singleton
+func importQualityWeights(filename string) {
+	// Import resources
+	lines, err := ReadCsv(filename)
+	if err != nil {
+		panic(err)
+	}
+
+	quality.CountryQualityWeightsMap = make(map[string]quality.CountryQualityWeights, len(lines)-1)
+
+	headerMap := make(map[int]string)
+	for _, line := range lines {
+		qualityWeightsMap := make(map[string]float64, len(line))
+		// Generate the headerMap and skip the header line
+		if line[0] == "Country" {
+			for i, name := range line {
+				headerMap[i] = name
+			}
+			continue
+		}
+
+		countryName := line[0]
+
+		for i, value := range line {
+			// Skip the first column since this is the country name
+			if i < 1 {
+				continue
+			}
+
+			weight, err := strconv.ParseFloat(value, 64)
+			if err != nil {
+				panic(err)
+			}
+
+			qualityWeightsMap[headerMap[i-1]] = weight
+		}
+
+		// Construct the quality weights struct for this country
+		countryQualityWeights := quality.CountryQualityWeights{
+			FoodQualityWeight:  qualityWeightsMap["FoodQualityWeight"],
+			HousingQuality:     qualityWeightsMap["HousingQuality"],
+			ElectronicsQuality: qualityWeightsMap["ElectronicsQuality"],
+			MetalsQuality:      qualityWeightsMap["MetalsQuality"],
+			LandQuality:        qualityWeightsMap["LandQuality"],
+			MilitaryQuality:    qualityWeightsMap["MilitaryQuality"],
+		}
+
+		// Add the quality weights struct to the map
+		quality.CountryQualityWeightsMap[countryName] = countryQualityWeights
+	}
+
+}
+
 func main() {
-	if len(os.Args) < 9 {
-		str := "<selfCountryName>, <resourcesFilename>, <initialStateFilename>, <outputScheduleFilename>, " +
-			"<numOutputSchedules>, <depthBound>, <frontierMaxSize>, <roundsToSimulate>"
+	if len(os.Args) < 11 {
+		str := "<selfCountryName>, <resourcesFilename>, <countryQualityWeightsFilename>, <initialStateFilename>, " +
+			"<outputScheduleFilename>, <proposedScheduleFilename>, <numOutputSchedules>, <depthBound>, " +
+			"<frontierMaxSize>, <roundsToSimulate>, <beamCount>"
 		panic(fmt.Errorf("not enough command line parameters. need: %s", str))
 	}
 
@@ -374,12 +516,15 @@ func main() {
 
 	selfCountry := strings.Trim(os.Args[1], ",")
 	resourcesFilename := strings.Trim(os.Args[2], ",")
-	initialStateFilename := strings.Trim(os.Args[3], ",")
-	outputScheduleFilename := strings.Trim(os.Args[4], ",")
-	numOutputSchedules := strings.Trim(os.Args[5], ",")
-	depthBound := strings.Trim(os.Args[6], ",")
-	frontierMaxSize := strings.Trim(os.Args[7], ",")
-	roundsToSimulate := strings.Trim(os.Args[8], ",")
+	countryQualityWeightsFilename := strings.Trim(os.Args[3], ",")
+	initialStateFilename := strings.Trim(os.Args[4], ",")
+	outputScheduleFilename := strings.Trim(os.Args[5], ",")
+	proposedScheduleFilename := strings.Trim(os.Args[6], ",")
+	numOutputSchedules := strings.Trim(os.Args[7], ",")
+	depthBound := strings.Trim(os.Args[8], ",")
+	frontierMaxSize := strings.Trim(os.Args[9], ",")
+	roundsToSimulate := strings.Trim(os.Args[10], ",")
+	beamCount := strings.Trim(os.Args[11], ",")
 
 	numOutputSchedulesInt, err := strconv.Atoi(numOutputSchedules)
 	if err != nil {
@@ -401,6 +546,11 @@ func main() {
 		panic(err)
 	}
 
+	beamCountInt, err := strconv.Atoi(beamCount)
+	if err != nil {
+		panic(err)
+	}
+
 	constants := Constants{
 		TweakableConstants: TweakableConstants{
 			FailureConstant: util.FailureCost,
@@ -415,8 +565,15 @@ func main() {
 		},
 	}
 
-	myCountryScheduler(selfCountry, resourcesFilename, initialStateFilename, outputScheduleFilename,
-		numOutputSchedulesInt, depthBoundInt, frontierMaxSizeInt, roundsToSimulateInt, constants)
+	// Import the country quality weights map
+	importQualityWeights(countryQualityWeightsFilename)
+
+	_ = selfCountry
+
+	// Start all of the countries and game manager
+	allCountrySchedulersWithGameManager(resourcesFilename, initialStateFilename, outputScheduleFilename,
+		proposedScheduleFilename, numOutputSchedulesInt, depthBoundInt, frontierMaxSizeInt, roundsToSimulateInt,
+		beamCountInt, constants)
 }
 
 // ReadCsv accepts a file and returns its content as a multi-dimensional type

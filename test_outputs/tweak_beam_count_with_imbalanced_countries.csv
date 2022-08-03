@@ -1,0 +1,5 @@
+Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
+TweakBeamCountWithImbalancedCountries,inputs/countries_imbalanced.csv,BeamCount,1,-2.7639318150253303,286.21138454997964,83.44397744520703,16.7189947,16.7342843,16.726451660000002,10
+TweakBeamCountWithImbalancedCountries,inputs/countries_imbalanced.csv,BeamCount,2,8.009061153106757,314.47566149980594,95.80132614466241,16.71604,16.7381288,16.725097299999998,10
+TweakBeamCountWithImbalancedCountries,inputs/countries_imbalanced.csv,BeamCount,3,2.1482827135528737,314.8140402836485,166.64308733540992,16.7114587,16.7266226,16.71956068,10
+TweakBeamCountWithImbalancedCountries,inputs/countries_imbalanced.csv,BeamCount,4,9.907258508997643,314.4563180664048,109.86368061556269,16.7129537,16.7283906,16.72308681,10

@@ -2,6 +2,7 @@ package transformations
 
 import (
 	"CS5260_Final_Project/scheduler"
+	"CS5260_Final_Project/util"
 	"fmt"
 )
 
@@ -52,33 +53,33 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 5,
+				Amount: util.TransformMult * 5,
 			},
 			{
 				Name:   "MetallicElements",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "Timber",
-				Amount: 5,
+				Amount: util.TransformMult * 5,
 			},
 			{
 				Name:   "MetallicAlloys",
-				Amount: 3,
+				Amount: util.TransformMult * 3,
 			},
 		},
 		Outputs: []scheduler.ActionResource{
 			{
 				Name:   "Housing",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "HousingWaste",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "Population",
-				Amount: 5,
+				Amount: util.TransformMult * 5,
 			},
 		},
 	}
@@ -90,25 +91,25 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "MetallicElements",
-				Amount: 2,
+				Amount: util.TransformMult * 2,
 			},
 		},
 		Outputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "MetallicAlloys",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "MetallicAlloysWaste",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 		},
 	}
@@ -120,29 +121,29 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "MetallicElements",
-				Amount: 3,
+				Amount: util.TransformMult * 3,
 			},
 			{
 				Name:   "MetallicAlloys",
-				Amount: 2,
+				Amount: util.TransformMult * 2,
 			},
 		},
 		Outputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "Electronics",
-				Amount: 2,
+				Amount: util.TransformMult * 2,
 			},
 			{
 				Name:   "ElectronicsWaste",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 		},
 	}
@@ -154,25 +155,25 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "AvailableLand",
-				Amount: 5,
+				Amount: util.TransformMult * 5,
 			},
 		},
 		Outputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "Farm",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "FarmWaste",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 		},
 	}
@@ -184,25 +185,25 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "Farm",
-				Amount: 3,
+				Amount: util.TransformMult * 3,
 			},
 		},
 		Outputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "Food",
-				Amount: 2,
+				Amount: util.TransformMult * 2,
 			},
 			{
 				Name:   "FoodWaste",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 		},
 	}
@@ -214,29 +215,29 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 		Inputs: []scheduler.ActionResource{
 			{
 				Name:   "Population",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "Housing",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "MetallicAlloys",
-				Amount: 2,
+				Amount: util.TransformMult * 2,
 			},
 			{
 				Name:   "Food",
-				Amount: 3,
+				Amount: util.TransformMult * 3,
 			},
 		},
 		Outputs: []scheduler.ActionResource{
 			{
 				Name:   "Military",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 			{
 				Name:   "MilitaryWaste",
-				Amount: 1,
+				Amount: util.TransformMult * 1,
 			},
 		},
 	}
@@ -245,7 +246,7 @@ func InitializeTransformations() map[string]scheduler.ScheduleAction {
 }
 
 func (t Transformation) ToString(country scheduler.Country, otherCountry scheduler.Country) string {
-	str := fmt.Sprintf("(TRANSFORM self\n\t(INPUTS  ")
+	str := fmt.Sprintf("(TRANSFORM \"%s\"\n\t(INPUTS  ", country.GetName())
 
 	for i, input := range t.Inputs {
 		str = fmt.Sprintf("%s(%s %v)", str, input.Name, input.Amount)

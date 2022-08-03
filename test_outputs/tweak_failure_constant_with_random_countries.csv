@@ -1,7 +1,7 @@
-Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
-TweakFailureConstantWithBalancedCountries,inputs/countries_random.csv,FailureConstant,-0.5,88.1250022444874,10.169392533333333,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_random.csv,FailureConstant,-1,91.22759615243399,10.190392233333332,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_random.csv,FailureConstant,-1.5,83.60494229064108,10.178812200000001,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_random.csv,FailureConstant,-2,85.97426980916697,10.1798353,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_random.csv,FailureConstant,-2.5,86.21384286523902,10.1640421,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_random.csv,FailureConstant,-3,85.14213107499899,10.183882,3
+Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-0.5,-5.362000313878069,209.97120110596575,63.06665041737792,16.7163158,16.7337201,16.72520132,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-1,25.815034821458994,316.8054611132294,95.99247174295724,16.7146664,16.7245156,16.72045297,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-1.5,-12.506934337773544,87.7292999470476,39.20365471070247,16.7167289,16.7274391,16.72234728,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-2,-3.627217082409686,311.6030351806233,114.18980883074475,16.71598,16.7383979,16.72568914,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-2.5,-9.488694712537495,299.8979186579433,70.65005157128066,16.716649,16.7362472,16.72615789,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-3,-1.6686151588089047,311.6030351806233,91.65200353942843,16.7147384,16.7354672,16.723700790000002,10

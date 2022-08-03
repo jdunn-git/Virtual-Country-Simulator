@@ -80,11 +80,14 @@ func (sa *ScheduledAction) ToString() string {
 	return sa.Action.ToString(sa.ThisCountry, sa.OtherCountry)
 }
 
+// CountryScheduler contains the countries map for this scheduler instance
+type CountryScheduler struct {
+	// CountriesMap contains all countries that can be used in the schedule
+	CountriesMap map[string]Country
+}
+
 // AvailableActions is the global map of all actions that a country can take
 var AvailableActions map[string]ScheduleAction
-
-// CountriesMap contains all countries that can be used in the schedule
-var CountriesMap map[string]Country
 
 // InitializeAvailableActions will initialize all transformations and transfers
 func InitializeAvailableActions(transformations map[string]ScheduleAction, transfers map[string]ScheduleAction) {

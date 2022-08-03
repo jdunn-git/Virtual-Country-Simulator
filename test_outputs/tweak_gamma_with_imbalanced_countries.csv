@@ -1,6 +1,8 @@
-Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
-TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.2,14.451828019472186,10.172564766666666,3
-TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.4,29.956664208562113,10.1932486,3
-TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.6000000000000001,54.756946401922875,10.178176633333333,3
-TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.8,95.58201288429196,10.185267733333333,3
-TweakGammaWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,1,145.50195136689678,10.178864299999999,3
+Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
+TweakGammaWithImbalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.4,-6.878055592368071,311.5906640482618,113.30829864599346,16.723348,16.7345262,16.72751667,10
+TweakGammaWithImbalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.5,-3.7309618439468295,184.7716973870638,48.50884478213424,16.7204245,16.7316494,16.72632734,10
+TweakGammaWithImbalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.6,-9.437006900023789,246.63058631818012,44.22969636640288,16.7215538,16.7309515,16.72719735,10
+TweakGammaWithImbalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.7,-2.6872115988805376,310.53826331612504,91.68906827485603,16.718266,16.7340802,16.724275069999997,10
+TweakGammaWithImbalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.7999999999999999,-5.111976336827695,240.91570338438567,74.0961209667313,16.7233479,16.736584,16.728985180000002,10
+TweakGammaWithImbalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.8999999999999999,0.18502188995148572,207.64079915518892,71.93450989965214,16.7214142,16.7510728,16.73218895,10
+TweakGammaWithImbalancedCountries,inputs/countries_imbalanced.csv,Gamma,0.9999999999999999,-11.378055778632586,313.6465760798501,131.1950706441981,16.7184496,16.7355274,16.7250912,10
