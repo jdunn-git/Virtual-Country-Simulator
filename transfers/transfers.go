@@ -2,6 +2,7 @@ package transfers
 
 import (
 	"CS5260_Final_Project/scheduler"
+	"CS5260_Final_Project/util"
 	"fmt"
 )
 
@@ -38,7 +39,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "MetallicElements",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -48,7 +49,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "Timber",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -58,7 +59,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "MetallicAlloys",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -68,7 +69,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "MetallicAlloysWaste",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -78,7 +79,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "Electronics",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -88,7 +89,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "ElectronicsWaste",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -98,7 +99,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "Food",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -108,7 +109,7 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 		Type: scheduler.TransferType,
 		Resource: scheduler.ActionResource{
 			Name:   "FoodWaste",
-			Amount: 10,
+			Amount: util.TransferMult * 10,
 		},
 	}
 
@@ -116,11 +117,11 @@ func InitializeTransfers() map[string]scheduler.ScheduleAction {
 }
 
 func (t Transfer) ToString(country scheduler.Country, otherCountry scheduler.Country) string {
-	c1 := "self"
+	c1 := fmt.Sprintf("\"%s\"", country.GetName())
 	c2 := fmt.Sprintf("\"%s\"", otherCountry.GetName())
 
 	if otherCountry.GetSelf() {
-		c2 = "self"
+		c2 = fmt.Sprintf("\"%s\"", otherCountry.GetName())
 		c1 = fmt.Sprintf("\"%s\"", country.GetName())
 	}
 

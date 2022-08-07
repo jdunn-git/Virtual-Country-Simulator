@@ -1,7 +1,7 @@
-Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
-TweakFailureConstantWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,-0.5,84.56523211263745,10.187093033333333,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,-1,80.5839936996815,10.1753919,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,-1.5,79.81002295299442,10.1761318,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,-2,77.89627817841732,10.188436633333334,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,-2.5,79.35944374046147,10.181640033333332,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_imbalanced.csv,Gamma,-3,77.83152622246315,10.183370133333334,3
+Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
+TweakFailureConstantWithImbalancedCountries,inputs/countries_imbalanced.csv,FailureCost,-0.5,59.212004999273546,105.50910249127317,79.7475964375875,21.7818393,21.8401393,21.81088545,10
+TweakFailureConstantWithImbalancedCountries,inputs/countries_imbalanced.csv,FailureCost,-1,72.66549039399207,107.86219512695038,88.34371809277994,21.803415,21.8533985,21.831347009999998,10
+TweakFailureConstantWithImbalancedCountries,inputs/countries_imbalanced.csv,FailureCost,-1.5,73.01801260299105,113.32485910811421,96.96482543380343,21.8005637,27.410982,22.38820046,10
+TweakFailureConstantWithImbalancedCountries,inputs/countries_imbalanced.csv,FailureCost,-2,85.07563012555899,114.23730179075922,107.19510744332554,21.7905561,21.8672469,21.82688563,10
+TweakFailureConstantWithImbalancedCountries,inputs/countries_imbalanced.csv,FailureCost,-2.5,102.0126416525523,144.98291430187064,116.52130531979041,21.7962992,21.8569649,21.82399795,10
+TweakFailureConstantWithImbalancedCountries,inputs/countries_imbalanced.csv,FailureCost,-3,79.11000882805668,126.6736152570619,110.31666751047979,21.7751678,21.8629719,21.806592430000002,10

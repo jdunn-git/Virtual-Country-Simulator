@@ -1,0 +1,2614 @@
+***********************************************************************************************
+*************************************  Round 1 Proposals *************************************
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.026765549581622326
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.045324833863576094
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.050256007127422696
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04769282507340915
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04147259546769261
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03387523255966882
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.02617917781610061
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.01904367483079087
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.012758926335354094
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFER "Gondor" "The Shire" ((MetallicAlloys 10)))) EU: 0.0894171545579497
+  (TRANSFER "Gondor" "The Shire" ((Electronics 10)))) EU: 0.09017982506360715
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.0697683312033812
+  (TRANSFER "Gondor" "The Shire" ((MetallicAlloys 10)))) EU: 0.08069256503830699
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.055518738909341836
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.03595844163158984
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.02091302643137729
+  (TRANSFER "Gondor" "The Shire" ((MetallicAlloys 10)))) EU: 0.016252526845280377
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.005455118575557076
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: -0.0047119890749849815
+  (TRANSFER "Gondor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.019818543244146676
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.00978616661340367
+  (TRANSFER "Gondor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.018936071904199242
+  (TRANSFER "Gondor" "Rivendell" ((Electronics 10)))) EU: 0.014659412393742952
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.012884409819783591
+  (TRANSFER "Gondor" "Rivendell" ((Electronics 10)))) EU: 0.005843553522712586
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: -0.0028669802502816755
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: -0.006063869292847378
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: -0.008438826390232962
+  (TRANSFER "Gondor" "Mirkwood" ((Food 10)))) EU: 0.07710762262920605
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06760674783792722
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05461339697493997
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04110525714051211
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.028579007425232963
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.01766633931538941
+  (TRANSFER "Gondor" "Mirkwood" ((Food 10)))) EU: 0.016232156393468707
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.006382891162565026
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.00449100939854075
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.15557783393328137
+  (TRANSFER "Erebor" "The Shire" ((ElectronicsWaste 10)))) EU: 0.15089175692684265
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.11533249128836509
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.1125289550247098
+  (TRANSFER "The Shire" "Erebor" ((MetallicAlloys 10)))) EU: 0.0813353536363805
+  (TRANSFER "Erebor" "Rivendell" ((ElectronicsWaste 10)))) EU: 0.05482478977057341
+  (TRANSFER "The Shire" "Erebor" ((Food 10)))) EU: 0.03316496089853287
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.01518868637563063
+
+]
+
+Proposed Country:	Gondor
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: -0.013049058608711778
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.01188228117833769
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.011559145872899043
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.011678776328497016
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.012004556786776399
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.012401941391589
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.01279857928572588
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.013159113397075815
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.013469487664546372
+
+]
+
+***********************************************************************************************
+*************************************  Round 2 Proposals *************************************
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.014144109041898606
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.01392646747079614
+  (TRANSFER "Erebor" "Rohan" ((ElectronicsWaste 10)))) EU: 0.023987651764645766
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.009265000556269918
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.0010266351610505042
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.031937534126785
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.04294550131849708
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.022185088383336375
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.007839973017129579
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.9185594573665438
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6890254628411624
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.534349796220561
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.36280550058654526
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.24239027098501736
+  (TRANSFER "The Shire" "Erebor" ((Food 10)))) EU: 0.17294378069583616
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.11233503227097769
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.09036764790006233
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.05514760400756233
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.09234970355687529
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.14052426530764356
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.09020561409695287
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.05521910702454229
+  (TRANSFER "Erebor" "Rivendell" ((FoodWaste 10)))) EU: 0.03364405438899207
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.056112418742619505
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.03140803110909697
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.014295342023277095
+  (TRANSFER "Erebor" "Rivendell" ((ElectronicsWaste 10)))) EU: 0.008047667628877916
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.7972839280410591
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.5619730532444732
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.39147922733577084
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.270131065095929
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.1889614228385862
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.12150648157327852
+  (TRANSFER "Mirkwood" "Erebor" ((MetallicAlloys 10)))) EU: 0.09003629595628782
+  (TRANSFER "Mirkwood" "Erebor" ((Food 10)))) EU: 0.061845123648475664
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03526426073270675
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFER "Rohan" "Erebor" ((Food 10)))) EU: 0.06965466457491548
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0755205386400026
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.1683847997192877
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.12590551413185255
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.09151927326919868
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06424857381573909
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.05114374145738512
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.04775736675332366
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.02844924519571299
+
+]
+
+Proposed Country:	Gondor
+[ (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.07469800521927328
+  (TRANSFER "Erebor" "Gondor" ((MetallicAlloysWaste 10)))) EU: 0.05254031918082863
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.028824381300158478
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.09632240214309337
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.05882209313820194
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.033118003491208775
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.015403790569823893
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.0031441661033918197
+  (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.0002638842929433595
+
+]
+
+***********************************************************************************************
+*************************************  Round 3 Proposals *************************************
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 1.0772188950647807
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.7678661069360126
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.5817202619619287
+  (TRANSFER "Erebor" "Rohan" ((FoodWaste 10)))) EU: 0.3883680275241659
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.28817040310661396
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18871828072239358
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.12159216102200954
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.07602782413669687
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.058949583433282604
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.9243510415441497
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6933879044101791
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.5037497878509013
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.3583952407111773
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.25101695858256134
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.17334239763765763
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.11785139886997426
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.07850898549094833
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.0507469839777871
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.2575944134467352
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.8772549033995544
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6099142014111469
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.42878077989043467
+  (TRANSFER "Erebor" "Rivendell" ((FoodWaste 10)))) EU: 0.2839345562838977
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.22981205214826755
+  (TRANSFER "Erebor" "Rivendell" ((ElectronicsWaste 10)))) EU: 0.161605678099846
+  (TRANSFER "Erebor" "Rivendell" ((ElectronicsWaste 10)))) EU: 0.11169406343332508
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.06922413806219428
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 1.2811486403890593
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.8649544808973345
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.5740251637317013
+  (TRANSFER "Mirkwood" "Erebor" ((MetallicAlloys 10)))) EU: 0.4224179861461159
+  (TRANSFER "Mirkwood" "Erebor" ((MetallicAlloys 10)))) EU: 0.3084302470857333
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.20213180178023357
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.1603429951829571
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.12288444471283554
+  (TRANSFER "Mirkwood" "Erebor" ((MetallicAlloys 10)))) EU: 0.08387422310014721
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.22580148780346534
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.3358731167641923
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.24940726340584057
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.20771469137672605
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.14800151595599456
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1033859320954708
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.07015033756721802
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.04884121428181329
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.03317119582150051
+
+]
+
+Proposed Country:	Gondor
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 5)
+	         (MetallicElements 1)
+	         (Timber 5)
+	         (MetallicAlloys 3)
+	(OUTPUTS (Housing 1)
+	         (HousingWaste 1)
+	         (Population 5))) EU: 0.6041342447393439
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.4188299216429157
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.2889008996392824
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.19787017013609415
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.13412141690034407
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.0940006251686349
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.05712094089978283
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.039826328876370706
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.025508848268598675
+
+]
+
+***********************************************************************************************
+*************************************  Round 4 Proposals *************************************
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.3258335490095507
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.9420462132804047
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.6621563961068319
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.461698408620613
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.3196197410771564
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.21953016760227098
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.14926890342653634
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1000443235458707
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06559385435816091
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.8553052391614959
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.641379978902532
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.4657014708418191
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.33103290115519474
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.23154159810576416
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.15956828584918992
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.10814788996807395
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.07168996585321546
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.04596240621763784
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.3678961232195281
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.9545741350019126
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6640522396705688
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.4603379369198862
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.3176830070699074
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.2178543535401038
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.14801645060575605
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.09916383498638319
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.06498990946665392
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.3919041221203285
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.9784098431231292
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.6819572950917742
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.47239473871107024
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.32536605179145633
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.22260884710499898
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1509191346645585
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.10093226039174016
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06607489208198897
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.22424580843062417
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18775016496389094
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.24930322902193935
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18350289986309357
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1325422542730808
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.09973057971768087
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06812477943144742
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04435661403118786
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.026544628847847796
+
+]
+
+Proposed Country:	Gondor
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 1.002924148861352
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.7059558845605302
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.49372575735439445
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.34309803755845725
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.2366749285504252
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.16170959267113294
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.10900973960711813
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.07201262430983874
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.046063270434155396
+
+]
+
+***********************************************************************************************
+*************************************  Round 5 Proposals *************************************
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.1784957332323498
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.836935267547143
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.5878273754215391
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.40940686320462355
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.2829417502730172
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.19384711914160402
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.13130099100372913
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.08747925946635908
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.056808312333502635
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.7202854515894501
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.6223269872115683
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloysWaste 10)))) EU: 0.4349190825234196
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.2966646602407938
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.19839569377193061
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.12991835270708063
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.08251539424915842
+  (TRANSFER "Erebor" "The Shire" ((ElectronicsWaste 10)))) EU: 0.05789709622230052
+  (TRANSFER "Erebor" "The Shire" ((ElectronicsWaste 10)))) EU: 0.03835811090789309
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.1299022599236421
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.9054766383331768
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.6563070375281477
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.5360645457818977
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.4235523933568574
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.28053891733302244
+  (TRANSFER "Erebor" "Rivendell" ((FoodWaste 10)))) EU: 0.18533235627692152
+  (TRANSFER "Erebor" "Rivendell" ((FoodWaste 10)))) EU: 0.12052762193621916
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.0754775394976203
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.909010879590112
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.6376497899951831
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.443046822245093
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.3054462016784566
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.20888057442534252
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.14137340495750053
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.09426314856017391
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06140528106000886
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.038485729619232106
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.09234970355687529
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.23369963483118253
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.21384465231024738
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.16149507664711796
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.11891364841154611
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.08510075227683084
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.06535724119502291
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04285387214111008
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.02577974379928968
+
+]
+
+Proposed Country:	Gondor
+[ (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.0701814955563669
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.10891793952609095
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.11604734258355942
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.07294736322404602
+  (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.06736383693889025
+  (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.05611540382816649
+  (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.04316662048158304
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.02241365509164659
+  (TRANSFER "Erebor" "Gondor" ((MetallicAlloysWaste 10)))) EU: 0.008714950236497564
+
+]
+
+***********************************************************************************************
+*************************************  Round 6 Proposals *************************************
+Proposed Country:	Gondor
+[ (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.06561256045152201
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.03863051131028926
+  (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.06825178693608726
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.0729473632240434
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.04313648255522706
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.06296148712594339
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.0360965450685517
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.027335876917094527
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.011445971876851084
+
+]
+
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.015575114078709335
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.014916074020009934
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.03234549372303434
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.056260300817966985
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0317082115506906
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.055034091612794545
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.030641750593204377
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.013749869390460093
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0020249543346026223
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.4448442715244258
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.42440107355332823
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.2951755588144713
+  (TRANSFER "Erebor" "The Shire" ((FoodWaste 10)))) EU: 0.20177254068996225
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.19281370010710278
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.12664586791468388
+  (TRANSFER "The Shire" "Erebor" ((MetallicAlloys 10)))) EU: 0.09390687911396157
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.057879913293427954
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.032800582728449434
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: -0.014556579028550105
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: -0.014497686994856053
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.020320054960804274
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.006704753994910464
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: -0.002819234664086418
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.009992481884585267
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.027208309608869056
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.011384128410823282
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.00038744680025566
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.2230445106487902
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.8592518075401293
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.5984143376256678
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.41772180838149037
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.27399244599262623
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.22213637919350862
+  (TRANSFER "Erebor" "Mirkwood" ((MetallicAlloysWaste 10)))) EU: 0.14475736330794434
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0916443418479398
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.06954929200230034
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.09555369785711026
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.15485887727448117
+  (TRANSFER "Erebor" "Rohan" ((ElectronicsWaste 10)))) EU: 0.1337273196665838
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.14539184935265634
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.10096841186083526
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0673359460631949
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.057185849885357805
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.04389240798914072
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.023096754535310668
+
+]
+
+***********************************************************************************************
+*************************************  Round 7 Proposals *************************************
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.5069522198579364
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.132225279555565
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.8247974628347858
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.5892757680803878
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.41534799059788785
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.2895668961772412
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.19972858075417926
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.1360471520238076
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.09111874510742807
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.8329939858522812
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.2805981778996938
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.8923305313983555
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6200827851220514
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.4294402127301731
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.2960332428296411
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.20270683293711123
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.13742518370792137
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.09175971054642043
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.8648770813782825
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 1.4073699577318042
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.9464223649751928
+  (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 0.6645753802658888
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.5053924291822767
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.33319422912434
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.24901000011870392
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1620110690946453
+  (TRANSFER "Erebor" "Mirkwood" ((FoodWaste 10)))) EU: 0.10382376797027504
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.07782621910941359
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.19775608893126234
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.163395089390872
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.12932310714871284
+  (TRANSFER "Erebor" "Gondor" ((ElectronicsWaste 10)))) EU: 0.10636275322560962
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.07766100789978288
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.054429434350152774
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03597338153168757
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.021508157546017807
+
+]
+
+Proposed Country:	Gondor
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.3833185374255263
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.2663263597117117
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.18317162909483306
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.1243671890498527
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.08292140957838962
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.0659598914521559
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.05232874941290692
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.038582351971472376
+  (TRANSFER "Erebor" "Gondor" ((MetallicAlloysWaste 10)))) EU: 0.01986749335244428
+
+]
+
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.875077856426444
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.6177756127896621
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.43159947661005127
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.29890791862039034
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.20515324519111838
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.13924019291713072
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.09303113379674782
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06068431241970424
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0380572111783293
+
+]
+
+***********************************************************************************************
+*************************************  Round 8 Proposals *************************************
+Proposed Country:	Gondor
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.015545168234315399
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.14299433521743302
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.09125896758899837
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.0979060092420148
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.060118792399866186
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.05444693527385315
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.03017493654100015
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.013402474822992928
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.008563119976285918
+
+]
+
+Proposed Country:	Rohan
+[ (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.5156267770334705
+  (TRANSFER "Rohan" "Erebor" ((Food 10)))) EU: 0.4185757160533219
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.27946570658377795
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18401709440846076
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.14924280615369712
+  (TRANSFER "Erebor" "Rohan" ((FoodWaste 10)))) EU: 0.09682366549278604
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.08832919824436294
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05344870789706087
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.02945930696562145
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.7757827089283267
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.5611872199730155
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.38967789042893664
+  (TRANSFER "The Shire" "Erebor" ((MetallicAlloys 10)))) EU: 0.30112709687016714
+  (TRANSFER "The Shire" "Erebor" ((MetallicAlloys 10)))) EU: 0.2288809318447581
+  (TRANSFER "The Shire" "Erebor" ((Food 10)))) EU: 0.16525840134495687
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.1081143859329882
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloysWaste 10)))) EU: 0.06877594746316582
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloysWaste 10)))) EU: 0.041092929682110674
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 1.1041432414808723
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.7698933528249499
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.5348444631477134
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.3699733388566373
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.25449078044157447
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.17366224396619892
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.1171085055467293
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.07754410541176092
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.049865252347219315
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.014653156748224351
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.014111988865059828
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.09341112535249958
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.057566775188259166
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.09095766972092392
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05547343311446362
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03093400569656314
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.013939287809881767
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.015718725754064675
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.07782621910941359
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.11728361290202619
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1252099225000431
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.11651921999237423
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.10043336878788253
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.08221526917143322
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06462612490204914
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.048940743274682015
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03559746684735558
+
+]
+
+***********************************************************************************************
+*************************************  Round 9 Proposals *************************************
+Proposed Country:	Gondor
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.611674135611284
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.4275725479120707
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.29670430895037053
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.23384084475631767
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.1519610472619382
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.11351778365817176
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.08215676377565727
+  (TRANSFER "Erebor" "Gondor" ((FoodWaste 10)))) EU: 0.050135358341683076
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.03407899775905056
+
+]
+
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.9376390872169478
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.6622178052540264
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.4629391744783532
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.3357732138516911
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.2852596012503896
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18629703739624826
+  (TRANSFER "Rohan" "Erebor" ((Food 10)))) EU: 0.13135718968407356
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0826240976253233
+  (TRANSFER "Erebor" "Rohan" ((ElectronicsWaste 10)))) EU: 0.05518743676022961
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.7805778563402063
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.5850924708276394
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.42452226728812453
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.30141899339648476
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.210463666244437
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.14466074202870335
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.09764590723488084
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.06430982870728559
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.04078411931846604
+
+]
+
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.3081452939290755
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.23810632996862913
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.21674005572762922
+  (TRANSFER "Erebor" "Rivendell" ((FoodWaste 10)))) EU: 0.1452865076544506
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.1531461085243394
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.09786890967114452
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.07414941254522658
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.051543230722857616
+  (TRANSFER "Erebor" "Rivendell" ((FoodWaste 10)))) EU: 0.02888242169519855
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFER "Mirkwood" "Erebor" ((MetallicAlloys 10)))) EU: 0.09290309323685061
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05872110219268665
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.033944421136787986
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.09990087342763944
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.12084207839667756
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.11734543162030535
+  (TRANSFER "Mirkwood" "Erebor" ((Food 10)))) EU: 0.08390962650813966
+  (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 0.05881447788685676
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03334903512724387
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.3422976122847572
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.9786482120289289
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.7091724046915545
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.5121678021580685
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.3690520693800213
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.26523529076939384
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18983469161030944
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.13494630776369726
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.09489270781380539
+
+]
+
+***********************************************************************************************
+*************************************  Round 10 Proposals *************************************
+Proposed Country:	Rivendell
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.3798067603675217
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.9629232468522584
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6698981919313307
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.46442882418483084
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.3205449843702507
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.21985642763627328
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.14941701025517368
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.10014366542214446
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.06567545419347806
+
+]
+
+Proposed Country:	Mirkwood
+[ (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 0.07386352264692087
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04521241957678535
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.024463339456256113
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.00972155140358165
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.05719237674709736
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.07287069996124411
+  (TRANSFER "Erebor" "Mirkwood" ((MetallicAlloysWaste 10)))) EU: 0.044050250667026
+  (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 0.031099162930108226
+  (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 0.019681854510684802
+
+]
+
+Proposed Country:	Erebor
+[ (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.09234970355687523
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.12264041152172149
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.12794066296331374
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.10935452815297535
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.08174069360273994
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05475966505846491
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.048437085410146984
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.03059954148400791
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.021231358921099563
+
+]
+
+Proposed Country:	Gondor
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 5)
+	         (MetallicElements 1)
+	         (Timber 5)
+	         (MetallicAlloys 3)
+	(OUTPUTS (Housing 1)
+	         (HousingWaste 1)
+	         (Population 5))) EU: -0.01559165390466289
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.015284516451454462
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.03168186079218062
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.014576058815949186
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.0026497430053006032
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.005672522671114656
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.011484343651483252
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.003674812304767402
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.004985933463527072
+
+]
+
+Proposed Country:	Rohan
+[ (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.8661334196018357
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.6139633670252368
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.47719017979369904
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.3155929766184978
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.20688989060829124
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.15517359592113875
+  (TRANSFER "Erebor" "Rohan" ((ElectronicsWaste 10)))) EU: 0.11098353150198634
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06879099534553791
+  (TRANSFORM "Rohan"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03993612071371202
+
+]
+
+Proposed Country:	The Shire
+[ (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.7185302550918506
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.5417159684038736
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.39431819691061054
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.29480102421529963
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloysWaste 10)))) EU: 0.198599953625958
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.17195112573123722
+  (TRANSFER "Erebor" "The Shire" ((ElectronicsWaste 10)))) EU: 0.1233523326573748
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloysWaste 10)))) EU: 0.07870857088485136
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloysWaste 10)))) EU: 0.047685776495413466
+
+]
+

@@ -1,6 +1,8 @@
-Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
-TweakGammaWithBalancedCountries,inputs/countries_random.csv,Gamma,0.2,13.442912933557578,10.1808142,3
-TweakGammaWithBalancedCountries,inputs/countries_random.csv,Gamma,0.4,32.6571173159029,10.18558,3
-TweakGammaWithBalancedCountries,inputs/countries_random.csv,Gamma,0.6000000000000001,62.63891236972037,10.195247766666666,3
-TweakGammaWithBalancedCountries,inputs/countries_random.csv,Gamma,0.8,98.66050544520617,10.203839199999999,3
-TweakGammaWithBalancedCountries,inputs/countries_random.csv,Gamma,1,149.15505622451647,10.1959947,3
+Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
+TweakGammaWithRandomCountries,inputs/countries_random.csv,Gamma,0.4,70.52132089505541,139.7041367243611,93.10449453608223,21.7928904,21.8382418,21.81191094,10
+TweakGammaWithRandomCountries,inputs/countries_random.csv,Gamma,0.5,18.743824865508618,138.23207143309733,88.64749070024494,21.8025983,21.8456462,21.82390196,10
+TweakGammaWithRandomCountries,inputs/countries_random.csv,Gamma,0.6,49.8713475196256,104.14745548124462,75.87021857258954,21.7809759,21.8583809,21.8180372,10
+TweakGammaWithRandomCountries,inputs/countries_random.csv,Gamma,0.7,52.90817636647247,105.0843750519911,75.53896612200143,21.8039407,21.8546457,21.8273351,10
+TweakGammaWithRandomCountries,inputs/countries_random.csv,Gamma,0.7999999999999999,52.99076843488162,114.03358504859891,89.32005957003499,21.783551,21.8791975,21.81940687,10
+TweakGammaWithRandomCountries,inputs/countries_random.csv,Gamma,0.8999999999999999,74.79757342507627,107.97832780730356,91.90603790878578,21.7741239,21.8417119,21.81395705,10
+TweakGammaWithRandomCountries,inputs/countries_random.csv,Gamma,0.9999999999999999,62.17075070760973,111.33299968524175,83.66010971996282,21.7769099,21.8246284,21.80018675,10

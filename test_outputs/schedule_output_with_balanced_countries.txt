@@ -1,0 +1,547 @@
+***********************************************************************************************
+******************************************  Round 1  ******************************************
+Chose schedule from:		    The Shire
+Expected Utility for The Shire:	    0.6037145097340952
+
+[ (TRANSFER "The Shire" "Rohan" ((FoodWaste 10)))) EU: 0.3838277378771424
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6890738002861292
+  (TRANSFER "Gondor" "The Shire" ((Food 10)))) EU: 1.0582790192349338
+  (TRANSFER "Rohan" "The Shire" ((MetallicAlloys 10)))) EU: 1.1656050880476851
+  (TRANSFER "Rohan" "The Shire" ((Food 10)))) EU: 1.0553132890847339
+  (TRANSFER "Gondor" "The Shire" ((MetallicAlloys 10)))) EU: 1.0172345274286074
+  (TRANSFER "The Shire" "Gondor" ((Electronics 10)))) EU: 0.8943304097008871
+  (TRANSFER "Gondor" "The Shire" ((Food 10)))) EU: 0.8123527056971213
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6037145097340952
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Gondor		  ||    100     |       100        |  100   |      100      |       40       |         50          |     60      |        50        |   50    |      50      |  50  |    50     |  30  |    50     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |       70       |         50          |     40      |        50        |   50    |      50      |  44  |    50     |  84  |    42     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 2  ******************************************
+Chose schedule from:		    Gondor
+Expected Utility for Gondor:	    1.4391956002242603
+
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 5.147507533974356
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 7.7931620614567745
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 8.068479625486487
+  (TRANSFER "The Shire" "Gondor" ((Electronics 10)))) EU: 7.717304281609161
+  (TRANSFER "Gondor" "The Shire" ((Food 10)))) EU: 5.44066063269281
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 4.018163999300964
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 2.8608904835745004
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.9760972180698835
+  (TRANSFER "Gondor" "The Shire" ((MetallicAlloys 10)))) EU: 1.4391956002242603
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Gondor		  ||    100     |       100        |  100   |      70       |       30       |         50          |     70      |        50        |   50    |      50      |  56  |    56     |  20  |    50     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |       80       |         50          |     30      |        50        |   50    |      50      |  44  |    50     |  94  |    42     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 3  ******************************************
+Chose schedule from:		    Gondor
+Expected Utility for Gondor:	    0.511474978359805
+
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.003517381907489875
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.0014323347561485623
+  (TRANSFER "The Shire" "Gondor" ((FoodWaste 10)))) EU: 0.2657402358748921
+  (TRANSFER "Gondor" "The Shire" ((Food 10)))) EU: 1.7215299818195648
+  (TRANSFER "Gondor" "The Shire" ((Food 10)))) EU: 1.8450689596851884
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.5104173515101558
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.1009848704723377
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.759648864793262
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.511474978359805
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Gondor		  ||    100     |       100        |  100   |      40       |       30       |         50          |     70      |        50        |   50    |      50      |  62  |    62     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |       80       |         50          |     30      |        50        |   50    |      50      |  44  |    50     | 114  |    32     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 4  ******************************************
+Chose schedule from:		    Gondor
+Expected Utility for Gondor:	    0.32360928681125445
+
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.012388000216176743
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.00027268683233429015
+  (TRANSFER "The Shire" "Gondor" ((MetallicAlloysWaste 10)))) EU: 0.12811495036528195
+  (TRANSFER "Gondor" "The Shire" ((Electronics 10)))) EU: 0.492494398053031
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.39043204712424273
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.2688079930061584
+  (TRANSFER "Gondor" "The Shire" ((MetallicAlloys 10)))) EU: 0.5614669063690305
+  (TRANSFER "Gondor" "The Shire" ((Electronics 10)))) EU: 0.4597070685343103
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.32360928681125445
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Gondor		  ||    100     |        97        |  100   |      20       |       18       |         60          |     52      |        51        |   50    |      50      |  66  |    66     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |       90       |         40          |     50      |        50        |   50    |      50      |  44  |    50     | 114  |    32     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 5  ******************************************
+Chose schedule from:		    Gondor
+Expected Utility for Gondor:	    0.281771147697262
+
+[ (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: -0.013092043801516373
+  (TRANSFER "Gondor" "The Shire" ((MetallicAlloys 10)))) EU: 1.2436732150680867
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.831827628179449
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.2200482896449765
+  (TRANSFER "The Shire" "Gondor" ((MetallicAlloysWaste 10)))) EU: 0.9030872094334963
+  (TRANSFER "Gondor" "The Shire" ((Electronics 10)))) EU: 0.8889215442971702
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.5902096351969492
+  (TRANSFER "The Shire" "Gondor" ((MetallicAlloysWaste 10)))) EU: 0.4220907289331729
+  (TRANSFORM "Gondor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.281771147697262
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Gondor		  ||    100     |        92        |  100   |       5       |       7        |         81          |     44      |        52        |   50    |      50      |  69  |    69     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |      100       |         20          |     60      |        50        |   50    |      50      |  44  |    50     | 114  |    32     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 6  ******************************************
+Chose schedule from:		    The Shire
+Expected Utility for The Shire:	    0.7023655255185691
+
+[ (TRANSFER "The Shire" "Erebor" ((FoodWaste 10)))) EU: 0.4105900610400769
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.7314023486988783
+  (TRANSFER "Erebor" "The Shire" ((Food 10)))) EU: 1.8028364414518998
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.6309302753516997
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.3680376216624734
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloys 10)))) EU: 1.1860648324792085
+  (TRANSFER "Erebor" "The Shire" ((Food 10)))) EU: 1.2064236037783818
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.9423476524240808
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.7023655255185691
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  30  |    60     |    50    |      50       |
+ Gondor		  ||    100     |        92        |  100   |       5       |       7        |         81          |     44      |        52        |   50    |      50      |  69  |    69     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |      110       |         20          |     60      |        50        |   50    |      50      |  29  |    50     | 144  |    27     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 7  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.9221895604002466
+
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.4993867822979376
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 7.19211650478648
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 8.125707794103763
+  (TRANSFER "Erebor" "The Shire" ((Food 10)))) EU: 6.761763524166174
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 4.6466563598321935
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 3.169793593824305
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 2.1328201862358096
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.4112069632570872
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.9221895604002466
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      70       |       40       |         50          |     70      |        50        |   50    |      50      |  56  |    56     |  20  |    60     |    50    |      50       |
+ Gondor		  ||    100     |        92        |  100   |       5       |       7        |         81          |     44      |        52        |   50    |      50      |  69  |    69     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |      110       |         20          |     40      |        50        |   50    |      50      |  29  |    50     | 154  |    27     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 8  ******************************************
+Chose schedule from:		    The Shire
+Expected Utility for The Shire:	    0.503654214001046
+
+[ (TRANSFER "The Shire" "Rivendell" ((ElectronicsWaste 10)))) EU: 0.26113026529071987
+  (TRANSFER "Erebor" "The Shire" ((Food 10)))) EU: 1.0331395265114511
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.1151958607701735
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 1.0545891929818283
+  (TRANSFER "Rivendell" "The Shire" ((Food 10)))) EU: 0.9379496041981784
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.896359263466574
+  (TRANSFER "Erebor" "The Shire" ((Food 10)))) EU: 0.930857413126932
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.6968751332847678
+  (TRANSFORM "The Shire"
+	(INPUTS  (Population 1)
+	         (Farm 3)
+	(OUTPUTS (Population 1)
+	         (Food 2)
+	         (FoodWaste 1))) EU: 0.503654214001046
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      70       |       40       |         50          |     80      |        50        |   50    |      50      |  56  |    56     |  0   |    60     |    50    |      50       |
+ Gondor		  ||    100     |        92        |  100   |       5       |       7        |         81          |     44      |        52        |   50    |      50      |  69  |    69     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        60        |   50    |      50      |  50  |    50     |  40  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |      110       |         20          |     30      |        40        |   50    |      50      |  17  |    50     | 192  |    31     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 9  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.8207757445948825
+
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 14.688817940895046
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 10.374358041249542
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 7.261357243734316
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 5.058664693230313
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 3.512780799779969
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 2.4335239013219008
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.6833474111484685
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.1639924940243573
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloys 10)))) EU: 0.8207757445948825
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |       100        |  100   |      30       |       30       |         50          |     80      |        50        |   50    |      50      |  64  |    64     |  0   |    60     |    50    |      50       |
+ Gondor		  ||    100     |        92        |  100   |       5       |       7        |         81          |     44      |        52        |   50    |      50      |  69  |    69     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        60        |   50    |      50      |  50  |    50     |  40  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |      120       |         20          |     30      |        40        |   50    |      50      |  17  |    50     | 192  |    31     |    50    |      50       |
+
+
+
+***********************************************************************************************
+******************************************  Round 10  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.2150776159414889
+
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: -0.01234721441726695
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.00015808288147755036
+  (TRANSFER "Erebor" "The Shire" ((MetallicAlloys 10)))) EU: 1.7233836348212765
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.2159427806161074
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.8090658445810592
+  (TRANSFER "The Shire" "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.5980191963841293
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.39925821302422443
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.26663444111076173
+  (TRANSFER "The Shire" "Erebor" ((FoodWaste 10)))) EU: 0.2150776159414889
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    100     |        98        |  100   |       5       |       21       |         61          |     80      |        50        |   50    |      50      |  69  |    69     |  0   |    70     |    50    |      50       |
+ Gondor		  ||    100     |        92        |  100   |       5       |       7        |         81          |     44      |        52        |   50    |      50      |  69  |    69     |  0   |    60     |    50    |      50       |
+ Mirkwood	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  50  |    50     |    50    |      50       |
+ Rivendell	  ||    100     |       100        |  100   |      100      |       50       |         50          |     50      |        60        |   50    |      50      |  50  |    50     |  40  |    50     |    50    |      50       |
+ Rohan		  ||    100     |       100        |  100   |      100      |       40       |         50          |     50      |        50        |   50    |      50      |  50  |    50     |  40  |    60     |    50    |      50       |
+ The Shire	  ||    100     |       100        |  100   |      100      |      130       |         10          |     30      |        40        |   50    |      50      |  17  |    50     | 192  |    21     |    50    |      50       |
+
+
+
