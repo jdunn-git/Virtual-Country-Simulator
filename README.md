@@ -1,4 +1,3 @@
-TODO
 ## Background
 This project simulates a virtual world with countries, resources, and actions that these countries can perform with these resources. It is a demonstration of artificial intelligence through the use of a forward searching, utility driven, depth-bound, anytime search.
 
@@ -22,7 +21,7 @@ The project will construct the "real" world based on the inputs passed in, and t
 
 The sequences of actions that we simulate are called the "schedule", and they are stored in a priority queue using an Expected Utility evaluation. For further details on the calculations, there is a Calculations section further down this README.
 
-Every country will be running in parellel in its own goroutine, so that each country simulates the world and fills up their own frontiers with (ideally) increasingly good schedules. Of course, the countries will find a lot of bad actions, so only the best paths will continue to be searched.
+Every country will be running in parallel in its own goroutine, so that each country simulates the world and fills up their own frontiers with (ideally) increasingly good schedules. Of course, the countries will find a lot of bad actions, so only the best paths will continue to be searched.
 
 After each country's frontier (i.e. the priority queue) has filled up, then it will send its best schedule as a proposal to the game manager and flush the priority queue. The game manager will respond back with the best overall schedule, and each country will then take this series of actions on its "real" world.
 
