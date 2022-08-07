@@ -1,0 +1,425 @@
+***********************************************************************************************
+******************************************  Round 1  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    11.456250655312054
+
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 2.344175416280013
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 3.8128460030014875
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 4.603386412027227
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 5.022896247438665
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 5.279966451492295
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 5.549423189277894
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 6.0496586991744286
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 7.2684581914953394
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 11.456250655312054
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      800       |         150         |     300     |       100        |   100   |      20      |  50  |     0     | 300  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      600       |         250         |     200     |       150        |   600   |     200      | 450  |    150    | 300  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      200       |         50          |     300     |        50        |   400   |     100      | 300  |    75     | 600  |    100    |   400    |      150      |
+ Rivendell	  ||    500     |       200        |  300   |       5       |      200       |         20          |     100     |        0         |   50    |      0       | 159  |    59     | 400  |    50     |   200    |      50       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      400       |         200         |     100     |        30        |   600   |     150      | 700  |    200    | 600  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  600   |      200      |       50       |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 800  |    250    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 2  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.06907124776047077
+
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.044487143858255584
+  (TRANSFER "Rohan" "Rivendell" ((Electronics 10)))) EU: 0.23882761750700637
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.2831318885466194
+  (TRANSFER "Rohan" "Rivendell" ((Food 10)))) EU: 0.3278871936962721
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.21995372295281135
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.1454891740131053
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.1355683957992397
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.08527084137598709
+  (TRANSFER "Rohan" "Rivendell" ((MetallicAlloys 10)))) EU: 0.06907124776047077
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      790       |         160         |     300     |       100        |   100   |      20      |  50  |     0     | 290  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      600       |         250         |     200     |       150        |   600   |     200      | 450  |    150    | 300  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      200       |         50          |     300     |        50        |   400   |     100      | 300  |    75     | 600  |    100    |   400    |      150      |
+ Rivendell	  ||    500     |       194        |  300   |       5       |      223       |         13          |     110     |        0         |   50    |      0       | 159  |    59     | 420  |    50     |   200    |      50       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      390       |         200         |     90      |        30        |   600   |     150      | 700  |    200    | 590  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  600   |      200      |       50       |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 800  |    250    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 3  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.127702791235762
+
+[ (TRANSFER "The Shire" "Rivendell" ((Timber 10)))) EU: -0.025
+  (TRANSFER "Rohan" "Rivendell" ((Food 10)))) EU: 0.23957085378730572
+  (TRANSFER "Rohan" "Rivendell" ((Food 10)))) EU: 0.3618322624179463
+  (TRANSFER "The Shire" "Rivendell" ((Food 10)))) EU: 0.38383365726073077
+  (TRANSFER "Rohan" "Rivendell" ((MetallicAlloys 10)))) EU: 0.3475876739986052
+  (TRANSFER "The Shire" "Rivendell" ((MetallicAlloys 10)))) EU: 0.2920574826457072
+  (TRANSFER "Rohan" "Rivendell" ((MetallicAlloys 10)))) EU: 0.23368953434187875
+  (TRANSFER "Rohan" "Rivendell" ((Electronics 10)))) EU: 0.1689463291818502
+  (TRANSFER "Rohan" "Rivendell" ((Food 10)))) EU: 0.127702791235762
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      790       |         160         |     300     |       100        |   100   |      20      |  50  |     0     | 290  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      600       |         250         |     200     |       150        |   600   |     200      | 450  |    150    | 300  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      200       |         50          |     300     |        50        |   400   |     100      | 300  |    75     | 600  |    100    |   400    |      150      |
+ Rivendell	  ||    500     |       194        |  310   |       5       |      253       |         13          |     120     |        0         |   50    |      0       | 159  |    59     | 460  |    50     |   200    |      50       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       40       |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 790  |    250    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 4  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.07895865685087494
+
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Housing 1)
+	         (MetallicAlloys 2)
+	         (Food 3)
+	(OUTPUTS (Military 1)
+	         (MilitaryWaste 1))) EU: -0.009531357282786646
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.36710850739271694
+  (TRANSFER "Gondor" "Rivendell" ((Electronics 10)))) EU: 0.4246333409658529
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.2959314815440748
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.22070507597936195
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.1451833184615988
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.1323057441297618
+  (TRANSFER "Erebor" "Rivendell" ((Electronics 10)))) EU: 0.09973684601398651
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.07895865685087494
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      770       |         160         |     290     |       100        |   100   |      20      |  50  |     0     | 280  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      600       |         250         |     190     |       150        |   600   |     200      | 450  |    150    | 290  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      200       |         50          |     300     |        50        |   400   |     100      | 300  |    75     | 600  |    100    |   400    |      150      |
+ Rivendell	  ||    499     |       190        |  310   |       5       |      273       |         15          |     140     |        0         |   49    |      0       | 159  |    59     | 477  |    50     |   201    |      51       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       40       |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 790  |    250    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 5  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.0763686025785216
+
+[ (TRANSFER "The Shire" "Rivendell" ((Food 10)))) EU: 0.5463408984507068
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.5296779679159188
+  (TRANSFER "Gondor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.3810192861121946
+  (TRANSFER "The Shire" "Rivendell" ((Food 10)))) EU: 0.3547427246558559
+  (TRANSFER "Gondor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.29937165461139353
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.24233573078068218
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.15405202559315279
+  (TRANSFER "The Shire" "Rivendell" ((MetallicAlloys 10)))) EU: 0.11487079033988137
+  (TRANSFER "Gondor" "Rivendell" ((Electronics 10)))) EU: 0.0763686025785216
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      760       |         160         |     290     |       100        |   100   |      20      |  50  |     0     | 280  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      580       |         250         |     180     |       150        |   600   |     200      | 450  |    150    | 280  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      200       |         50          |     300     |        50        |   400   |     100      | 300  |    75     | 600  |    100    |   400    |      150      |
+ Rivendell	  ||    499     |       188        |  310   |       5       |      314       |         16          |     150     |        0         |   49    |      0       | 159  |    59     | 507  |    50     |   201    |      51       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       30       |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 770  |    250    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 6  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.07728174481191542
+
+[ (TRANSFER "The Shire" "Rivendell" ((MetallicAlloys 10)))) EU: 0.5104905917403294
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.5420858543495913
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.37176186428594465
+  (TRANSFER "Rivendell" "The Shire" ((FoodWaste 10)))) EU: 0.2579224502757234
+  (TRANSFER "The Shire" "Rivendell" ((MetallicAlloys 10)))) EU: 0.2595597750533424
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.23627985445184477
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.1536787053814883
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.09724451386932177
+  (TRANSFER "The Shire" "Rivendell" ((MetallicAlloys 10)))) EU: 0.07728174481191542
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      760       |         160         |     290     |       100        |   100   |      20      |  50  |     0     | 280  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      580       |         250         |     180     |       150        |   600   |     200      | 450  |    150    | 260  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      200       |         50          |     300     |        50        |   400   |     100      | 300  |    75     | 600  |    100    |   400    |      150      |
+ Rivendell	  ||    499     |       182        |  310   |       5       |      347       |         19          |     150     |        0         |   49    |      0       | 159  |    59     | 527  |    40     |   201    |      51       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       0        |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 770  |    260    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 7  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.11820153006336565
+
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.044607908381842684
+  (TRANSFER "Mirkwood" "Rivendell" ((Food 10)))) EU: 0.3450166372141728
+  (TRANSFER "Erebor" "Rivendell" ((Electronics 10)))) EU: 0.26443421728782607
+  (TRANSFER "Mirkwood" "Rivendell" ((Food 10)))) EU: 0.2903997784333676
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.28971453632688227
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.2589553046793864
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.21266773972375608
+  (TRANSFER "Erebor" "Rivendell" ((Electronics 10)))) EU: 0.15585358632669788
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.11820153006336565
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      740       |         160         |     270     |       100        |   100   |      20      |  50  |     0     | 260  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      580       |         250         |     180     |       150        |   600   |     200      | 450  |    150    | 260  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      200       |         50          |     300     |        50        |   400   |     100      | 300  |    75     | 580  |    100    |   400    |      150      |
+ Rivendell	  ||    499     |       180        |  310   |       5       |      368       |         20          |     170     |        0         |   49    |      0       | 159  |    59     | 567  |    40     |   201    |      51       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       0        |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 770  |    260    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 8  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.08736918978259761
+
+[ (TRANSFER "Mirkwood" "Rivendell" ((MetallicAlloys 10)))) EU: 0.48116492750906636
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.4917917785825072
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloysWaste 10)))) EU: 0.3445504778242874
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.3709243209676393
+  (TRANSFER "Mirkwood" "Rivendell" ((Electronics 10)))) EU: 0.29997350598658945
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.26425629327656674
+  (TRANSFER "Rivendell" "Mirkwood" ((MetallicAlloysWaste 10)))) EU: 0.1742033317627163
+  (TRANSFER "Erebor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.13941608618639695
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.08736918978259761
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      720       |         170         |     270     |       100        |   100   |      20      |  50  |     0     | 240  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      580       |         250         |     180     |       150        |   600   |     200      | 450  |    150    | 260  |    50     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      190       |         60          |     290     |        50        |   400   |     100      | 300  |    75     | 580  |    100    |   400    |      150      |
+ Rivendell	  ||    499     |       178        |  310   |       5       |      399       |          1          |     180     |        0         |   49    |      0       | 159  |    59     | 587  |    40     |   201    |      51       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       0        |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 770  |    260    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 9  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.10065425004858065
+
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.044607908381842684
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.39550309033346187
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.2844011555580342
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.2602504791464567
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.2681413577004462
+  (TRANSFER "Rivendell" "Gondor" ((FoodWaste 10)))) EU: 0.1795924611064148
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.15963131904686717
+  (TRANSFER "Erebor" "Rivendell" ((Food 10)))) EU: 0.1311913036119146
+  (TRANSFER "Gondor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.10065425004858065
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      720       |         170         |     270     |       100        |   100   |      20      |  50  |     0     | 220  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      570       |         250         |     180     |       150        |   600   |     200      | 450  |    150    | 230  |    60     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      190       |         60          |     290     |        50        |   400   |     100      | 300  |    75     | 580  |    100    |   400    |      150      |
+ Rivendell	  ||    499     |       174        |  310   |       5       |      411       |          3          |     180     |        0         |   49    |      0       | 159  |    59     | 637  |    30     |   201    |      51       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       0        |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 770  |    260    |    0     |       0       |
+
+
+
+***********************************************************************************************
+******************************************  Round 10  ******************************************
+Chose schedule from:		    Rivendell
+Expected Utility for Rivendell:	    0.10296841982315404
+
+[ (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Housing 1)
+	         (MetallicAlloys 2)
+	         (Food 3)
+	(OUTPUTS (Military 1)
+	         (MilitaryWaste 1))) EU: 0.042856886308947365
+  (TRANSFER "Gondor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.37402919365166754
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (MetallicElements 2)
+	(OUTPUTS (Population 1)
+	         (MetallicAlloys 1)
+	         (MetallicAlloysWaste 1))) EU: 0.26916779061969753
+  (TRANSFER "Gondor" "Rivendell" ((MetallicAlloys 10)))) EU: 0.36574791548971924
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.3840794639484219
+  (TRANSFER "Gondor" "Rivendell" ((Food 10)))) EU: 0.35242112006777926
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Housing 1)
+	         (MetallicAlloys 2)
+	         (Food 3)
+	(OUTPUTS (Military 1)
+	         (MilitaryWaste 1))) EU: 0.23662594451034386
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Housing 1)
+	         (MetallicAlloys 2)
+	         (Food 3)
+	(OUTPUTS (Military 1)
+	         (MilitaryWaste 1))) EU: 0.15747381684549802
+  (TRANSFORM "Rivendell"
+	(INPUTS  (Population 1)
+	         (Housing 1)
+	         (MetallicAlloys 2)
+	         (Food 3)
+	(OUTPUTS (Military 1)
+	         (MilitaryWaste 1))) EU: 0.10296841982315404
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    2500    |       1000       |  200   |      100      |      720       |         170         |     270     |       100        |   100   |      20      |  50  |     0     | 220  |    50     |   500    |      400      |
+ Gondor		  ||   10000    |       400        |  500   |      900      |      550       |         250         |     180     |       150        |   600   |     200      | 450  |    150    | 210  |    60     |   1000   |      600      |
+ Mirkwood	  ||    800     |       300        |  1000  |      400      |      190       |         60          |     290     |        50        |   400   |     100      | 300  |    75     | 580  |    100    |   400    |      150      |
+ Rivendell	  ||    495     |       172        |  310   |       5       |      424       |          4          |     180     |        0         |   45    |      0       | 159  |    59     | 645  |    30     |   205    |      55       |
+ Rohan		  ||    5000    |       200        |  400   |     1500      |      370       |         200         |     80      |        30        |   600   |     150      | 700  |    200    | 560  |    200    |   800    |      600      |
+ The Shire	  ||    8000    |       100        |  590   |      200      |       0        |         30          |     50      |        50        |   300   |      20      | 600  |    100    | 770  |    260    |    0     |       0       |
+
+
+

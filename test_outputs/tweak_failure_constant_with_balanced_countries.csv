@@ -1,7 +1,7 @@
-Name,IntialStateFile,TweakedParameter,Value,AverageFinalExpectedUtility,AverageTime,TestRuns
-TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-0.5,76.30127946177186,10.175672033333333,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-1,86.83022414072802,10.177735266666668,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-1.5,79.01031496338716,10.205439533333333,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-2,79.0975220195815,10.181231066666667,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-2.5,82.01940346768302,10.163665700000001,3
-TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureConstant,-3,83.57981017055063,10.1632898,3
+Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureCost,-0.5,69.56760490183443,102.96850146754396,87.93891532625821,21.777344,21.8536753,21.80055985,10
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureCost,-1,73.44521219294957,136.72890592256405,102.84944750886677,21.7755209,21.8090651,21.78977202,10
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureCost,-1.5,73.13760187973854,114.51466386417637,94.66462905331495,21.7800136,21.9003471,21.81773888,10
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureCost,-2,79.24506744913508,114.62656006996728,102.76984235096806,21.7903862,21.8405825,21.810698249999998,10
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureCost,-2.5,102.83396610628188,144.42242048956754,113.91793651027395,21.7796025,21.8332874,21.804607179999998,10
+TweakFailureConstantWithBalancedCountries,inputs/countries_balanced.csv,FailureCost,-3,89.71462976244017,119.43238273935476,109.83771102710614,21.7831732,21.8384509,21.817197580000002,10

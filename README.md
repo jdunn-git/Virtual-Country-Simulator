@@ -15,33 +15,41 @@ This search can also be categorized as the following types of search:
 * Beam search, since it will include the top X amount of "best" actions based on the parameters passed in
 * Heuristic search, since it will store the actions/states based on their expected utility in a way that allows it to pop the best node off of the priority queue first.
 
-## Additional Details
-The project will construct the "real" world based on the inputs passed in, and then it will begin to simulate all of the possible actions that could be taken by or with the "self" country that is passed in. After the frontier (i.e. the priority queue) has filled up, then it will backup the best states from the frontier, advance the "real" world with the best state, and then flush the priority queue. The queue will then be re-initialized with the previous best states as a way to continue the search with these values, only now one more state ahead.
+It also contains a game manager that will manage each of the countries, intake schedules of possible actions that each country proposes based on its search results, and then respond to all countries based on the best overall schedule.
 
-Since we are using a depth-bounded search, this means that each round, the depth we search is also increased by one so that our depth bound maintains a consistent distance from our "real" state.
+## Additional Details
+The project will construct the "real" world based on the inputs passed in, and then it will begin to simulate all the possible actions that could be taken by or with the "self" country that is passed in.
 
 The sequences of actions that we simulate are called the "schedule", and they are stored in a priority queue using an Expected Utility evaluation. For further details on the calculations, there is a Calculations section further down this README.
+
+Every country will be running in parellel in its own goroutine, so that each country simulates the world and fills up their own frontiers with (ideally) increasingly good schedules. Of course, the countries will find a lot of bad actions, so only the best paths will continue to be searched.
+
+After each country's frontier (i.e. the priority queue) has filled up, then it will send its best schedule as a proposal to the game manager and flush the priority queue. The game manager will respond back with the best overall schedule, and each country will then take this series of actions on its "real" world.
+
+Each country will then re-initialized simulator with the current "real" world, and then they will continue to search for the next round.
+
 
 ## Running
 With Golang 1.18 installed and your GOROOT and GOPATH set correctly, you should be able to run the following commands:
 
 To build and run the code:
 ` $ go build main.go `
-` $ <executable> <self country name> <resources csv file> <initial state csv file> <schedule output filename> <max top states> <max depth each round> <max frontier size> <number of rounds>`
+` $ <executable> <self country name> <resources csv file> <country quality weights csv file> <initial state csv file> <schedule output filename> <proposed schedule output filename> <max depth each round> <max frontier size> <number of rounds> <number of beams>`
 
 For instance, an example run on my windows computer is:
-` $ main.exe "Gondor", "..\inputs\resources.csv", "..\inputs\countries_balanced.csv", "..\test_outputs\output.txt", 4, 5, 100, 10`
+` $ main.exe "..\inputs\resources.csv", "..\inputs\country_quality_weights.csv", "..\inputs\countries_balanced.csv", "..\test_outputs\best_schedule_output.txt", "..\test_outputs\proposed_schedule_output.txt", 8, 800, 10, 3`
 
 Here is a break down of the input parameters:
 * \<executable>: This is the executable created by the `$ go build main.go` script
-* \<self country name>: This is the name of the "self" country for this run
 * \<resources csv file>: This is the file containing the resource names and weights
+* \<country quality weights csv file>
 * \<initial state csv file>: This is the file containing the countries alongside their initial state (amount of each resource)
 * \<schedule output filename>: This is the name of the output file for the resultant schedules
-* \<max top states>: This is the max number of "best" states that are used after each round as a part of the beam search
+* \<proposed schedule output filename>
 * \<max depth each round>: This is the maximum depth to search each round before spreading out the search
 * \<max frontier size>: This is the maximum size of the frontier (in this scenario, that means the priority queue)
 * \<number of rounds>: This is the number of rounds to evaluate
+* \<number of beams>: This is the number of beams the search function will use
 
 To run the test code:
 `$ go test`
@@ -62,8 +70,8 @@ A country's State Quality is calculated from a sum-of-parts state quality for th
   * Justification: I am not dividing this by any value because they will be used for a variety of other calculations
 * Land Quality = (WeightFarmValue^2 + WeightFarmWasteValue) / AvailableLand
   * Justification: Since Farmland takes up a lot of space, I am including this in the Land Quality by squaring the weighted value for farmland. 
-* Military Quality = (WeightedMilitaryWeight + WeightedMilitaryWasteWeight) / (Population * 0.2)
-  * Justification: For the countries I have passed in based on the world Lord of the Rings by JRR Tolkien, the military would be important for defense. However it is a costly resource to create, so I am only dividing by 20% of the population.
+* Military Quality = (WeightedMilitaryWeight + WeightedMilitaryWasteWeight) / (Population * 0.05)
+  * Justification: For the countries I have passed in based on the world Lord of the Rings by JRR Tolkien, the military would be important for defense. However it is a costly resource to create, and the ability for a military to defend a population will be proportional to how large that population is, so I am dividing by 1/20th of the population for the quality value.
 
 I really wanted to generate the partial qualities in isolation based on the most meaningful measure for that quality. However, the side effect of that is that these values need to be rebalanced so that each produces a "fair" part of the overall state quality. 
 My fictional countries and the world I was trying to simulate is based on the world of the Lord of the Rings by JRR Tolkien, this means that the different partial quality weights would need once more rebalancing according to this test data. In essence, this means that there are 3 layers of rebalancing going on:
@@ -71,7 +79,7 @@ My fictional countries and the world I was trying to simulate is based on the wo
 2. Each Partial Quality has a formula to be meaningfully calculated based on the weighted components
 3. The State Quality then uses weights on each of these Partial Qualities to rebalance them against one another.
 I have added additional weights for each partial quality in order to weigh them against each other. \
-Therefore, the State Quality formla is:
+Therefore, the State Quality formula is:
 > State Quality = (Food Quality * 1.00) + (Housing Quality * 0.3) + (Electronics Quality * 0.15) + (Metals Quality * 0.15) + (Land Quality * 0.2) + (Military Quality * 0.5)
 
 Under these terms that I have defined, I am considering Food to be a critical resource, followed by military. This felt intuitive for a medieval society. Next I have housing followed by land use as the next most valuable resources. The electronics (which I consider to be a more generalized "technology" for this world) and metals are weighted equally at the bottom, because while both have value, they aren't as valuable as the other resources.

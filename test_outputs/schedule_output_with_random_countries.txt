@@ -1,0 +1,477 @@
+***********************************************************************************************
+******************************************  Round 1  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.01518868637563063
+
+[ (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: 0.00449100939854075
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.15557783393328137
+  (TRANSFER "Erebor" "The Shire" ((ElectronicsWaste 10)))) EU: 0.15089175692684265
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.11533249128836509
+  (TRANSFER "The Shire" "Erebor" ((Electronics 10)))) EU: 0.1125289550247098
+  (TRANSFER "The Shire" "Erebor" ((MetallicAlloys 10)))) EU: 0.0813353536363805
+  (TRANSFER "Erebor" "Rivendell" ((ElectronicsWaste 10)))) EU: 0.05482478977057341
+  (TRANSFER "The Shire" "Erebor" ((Food 10)))) EU: 0.03316496089853287
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.01518868637563063
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      832      |      489       |         100         |     760     |       687        |   658   |      11      | 729  |    329    | 800  |    229    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      523       |         432         |     647     |        61        |   481   |     518      | 113  |    452    | 658  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        81        |  1000  |      702      |       59       |         456         |     689     |        37        |   328   |     474      | 689  |    666    |  88  |    431    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      647       |         140         |     152     |       255        |   153   |     786      | 162  |    495    | 687  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      786       |         518         |     294     |       474        |   324   |      25      | 294  |    37     | 447  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 2  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.02844924519571299
+
+[ (TRANSFER "Rohan" "Erebor" ((Food 10)))) EU: 0.06965466457491548
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0755205386400026
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.1683847997192877
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.12590551413185255
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.09151927326919868
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06424857381573909
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.05114374145738512
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.04775736675332366
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.02844924519571299
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      807      |      499       |         100         |     780     |       687        |   658   |      11      | 734  |    334    | 810  |    229    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      523       |         432         |     647     |        61        |   481   |     518      | 113  |    452    | 658  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        81        |  1000  |      702      |       59       |         456         |     689     |        37        |   328   |     474      | 689  |    666    |  88  |    431    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      647       |         140         |     152     |       255        |   153   |     786      | 162  |    495    | 687  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     274     |       474        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 3  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.03317119582150051
+
+[ (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.22580148780346534
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.3358731167641923
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.24940726340584057
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.20771469137672605
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.14800151595599456
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1033859320954708
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.07015033756721802
+  (TRANSFER "Gondor" "Erebor" ((Food 10)))) EU: 0.04884121428181329
+  (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.03317119582150051
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      787      |      519       |         100         |     800     |       687        |   658   |      11      | 738  |    338    | 820  |    229    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      503       |         432         |     627     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        81        |  1000  |      702      |       59       |         456         |     689     |        37        |   328   |     474      | 689  |    666    |  88  |    431    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      647       |         140         |     152     |       255        |   153   |     786      | 162  |    495    | 687  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     274     |       474        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 4  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.026544628847847796
+
+[ (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.22424580843062417
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18775016496389094
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.24930322902193935
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.18350289986309357
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1325422542730808
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.09973057971768087
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.06812477943144742
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04435661403118786
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.026544628847847796
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      757      |      519       |         100         |     820     |       687        |   658   |      11      | 744  |    344    | 830  |    229    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      503       |         432         |     627     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        81        |  1000  |      702      |       59       |         456         |     689     |        37        |   328   |     474      | 689  |    666    |  88  |    431    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      647       |         140         |     132     |       255        |   153   |     786      | 162  |    495    | 677  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     274     |       474        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 5  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.02577974379928968
+
+[ (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.09234970355687529
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.23369963483118253
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.21384465231024738
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.16149507664711796
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.11891364841154611
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.08510075227683084
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.06535724119502291
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.04285387214111008
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.02577974379928968
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      732      |      549       |         100         |     830     |       687        |   658   |      11      | 749  |    349    | 830  |    229    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      503       |         432         |     627     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        81        |  1000  |      702      |       59       |         456         |     689     |        37        |   328   |     474      | 689  |    666    |  88  |    431    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      617       |         140         |     122     |       255        |   153   |     786      | 162  |    495    | 677  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     274     |       474        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 6  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.023096754535310668
+
+[ (TRANSFER "Gondor" "Erebor" ((MetallicAlloys 10)))) EU: 0.09555369785711026
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.15485887727448117
+  (TRANSFER "Erebor" "Rohan" ((ElectronicsWaste 10)))) EU: 0.1337273196665838
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.14539184935265634
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.10096841186083526
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.0673359460631949
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.057185849885357805
+  (TRANSFER "Gondor" "Erebor" ((Electronics 10)))) EU: 0.04389240798914072
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.023096754535310668
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      717      |      559       |         100         |     870     |       677        |   658   |      11      | 752  |    352    | 830  |    229    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      493       |         432         |     607     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        81        |  1000  |      702      |       59       |         456         |     689     |        37        |   328   |     474      | 689  |    666    |  88  |    431    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      617       |         140         |     122     |       255        |   153   |     786      | 162  |    495    | 677  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     254     |       484        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 7  ******************************************
+Chose schedule from:		    Mirkwood
+Expected Utility for Mirkwood:	    0.10382376797027504
+
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 1.8648770813782825
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 1.4073699577318042
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.9464223649751928
+  (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 0.6645753802658888
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.5053924291822767
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.33319422912434
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.24901000011870392
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.1620110690946453
+  (TRANSFER "Erebor" "Mirkwood" ((FoodWaste 10)))) EU: 0.10382376797027504
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      717      |      559       |         100         |     900     |       667        |   658   |      11      | 752  |    352    | 830  |    219    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      493       |         432         |     607     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        81        |  1000  |      682      |       59       |         456         |     659     |        47        |   328   |     474      | 693  |    670    |  88  |    441    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      617       |         140         |     122     |       255        |   153   |     786      | 162  |    495    | 677  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     254     |       484        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 8  ******************************************
+Chose schedule from:		    Mirkwood
+Expected Utility for Mirkwood:	    0.015718725754064675
+
+[ (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (MetallicElements 3)
+	         (MetallicAlloys 2)
+	(OUTPUTS (Population 1)
+	         (Electronics 2)
+	         (ElectronicsWaste 1))) EU: -0.014653156748224351
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: -0.014111988865059828
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.09341112535249958
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.057566775188259166
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.09095766972092392
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05547343311446362
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03093400569656314
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.013939287809881767
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.015718725754064675
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      717      |      559       |         100         |     930     |       667        |   658   |      11      | 752  |    352    | 830  |    219    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      493       |         432         |     607     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        78        |  1000  |      657      |       57       |         456         |     631     |        48        |   328   |     474      | 698  |    675    |  88  |    441    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      617       |         140         |     122     |       255        |   153   |     786      | 162  |    495    | 677  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     254     |       484        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 9  ******************************************
+Chose schedule from:		    Mirkwood
+Expected Utility for Mirkwood:	    0.03334903512724387
+
+[ (TRANSFER "Mirkwood" "Erebor" ((MetallicAlloys 10)))) EU: 0.09290309323685061
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05872110219268665
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.033944421136787986
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.09990087342763944
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.12084207839667756
+  (TRANSFER "Mirkwood" "Erebor" ((Electronics 10)))) EU: 0.11734543162030535
+  (TRANSFER "Mirkwood" "Erebor" ((Food 10)))) EU: 0.08390962650813966
+  (TRANSFER "Erebor" "Mirkwood" ((ElectronicsWaste 10)))) EU: 0.05881447788685676
+  (TRANSFORM "Mirkwood"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.03334903512724387
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      717      |      569       |         100         |     960     |       657        |   658   |      11      | 752  |    352    | 840  |    219    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      493       |         432         |     607     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        78        |  1000  |      642      |       47       |         456         |     601     |        58        |   328   |     474      | 701  |    678    |  78  |    441    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      617       |         140         |     122     |       255        |   153   |     786      | 162  |    495    | 677  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      776       |         518         |     254     |       484        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
+***********************************************************************************************
+******************************************  Round 10  ******************************************
+Chose schedule from:		    Erebor
+Expected Utility for Erebor:	    0.021231358921099563
+
+[ (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.09234970355687523
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.12264041152172149
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.12794066296331374
+  (TRANSFER "Rohan" "Erebor" ((MetallicAlloys 10)))) EU: 0.10935452815297535
+  (TRANSFER "Rivendell" "Erebor" ((Food 10)))) EU: 0.08174069360273994
+  (TRANSFORM "Erebor"
+	(INPUTS  (Population 1)
+	         (AvailableLand 5)
+	(OUTPUTS (Population 1)
+	         (Farm 1)
+	         (FarmWaste 1))) EU: 0.05475966505846491
+  (TRANSFER "Rivendell" "Erebor" ((Electronics 10)))) EU: 0.048437085410146984
+  (TRANSFER "Rivendell" "Erebor" ((MetallicAlloys 10)))) EU: 0.03059954148400791
+  (TRANSFER "Rohan" "Erebor" ((Electronics 10)))) EU: 0.021231358921099563
+
+]
+
+ Country Name || Population | MetallicElements | Timber | AvailableLand | MetallicAlloys | MetallicAlloysWaste | Electronics | ElectronicsWaste | Housing | HousingWaste | Farm | FarmWaste | Food | FoodWaste | Military | MilitaryWaste |
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ Erebor		  ||    1318    |       315        |  200   |      712      |      599       |         100         |     990     |       657        |   658   |      11      | 753  |    353    | 860  |    219    |    13    |      478      |
+ Gondor		  ||    8081    |        81        |  500   |       4       |      493       |         432         |     607     |        61        |   481   |     518      | 113  |    452    | 648  |    215    |   556    |      690      |
+ Mirkwood	  ||    2081    |        78        |  1000  |      642      |       47       |         456         |     601     |        58        |   328   |     474      | 701  |    678    |  78  |    441    |   626    |      147      |
+ Rivendell	  ||    4059    |        59        |  300   |      614      |      597       |         140         |     112     |       255        |   153   |     786      | 162  |    495    | 657  |    187    |   285    |      433      |
+ Rohan		  ||    7887    |       887        |  400   |      189      |      766       |         518         |     234     |       484        |   324   |      25      | 294  |    37     | 437  |    341    |   137    |      394      |
+ The Shire	  ||    1847    |       847        |  600   |      303      |      677       |         25          |     365     |        22        |   159   |     140      | 111  |    706    | 737  |    408    |   631    |      163      |
+
+
+
