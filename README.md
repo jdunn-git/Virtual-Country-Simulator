@@ -42,7 +42,7 @@ For instance, an example run on my windows computer is:
 Here is a break down of the input parameters:
 * \<executable>: This is the executable created by the `$ go build main.go` script
 * \<resources csv file>: This is the file containing the resource names and weights
-* \<country quality weights csv file>
+* \<country quality weights csv file>: This is the file that contains the quality weights each country should use.
 * \<initial state csv file>: This is the file containing the countries alongside their initial state (amount of each resource)
 * \<schedule output filename>: This is the name of the output file for the resultant schedules
 * \<proposed schedule output filename>
