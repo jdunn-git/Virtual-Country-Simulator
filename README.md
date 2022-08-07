@@ -96,6 +96,7 @@ In order to produce the Military Resource, I am converting food, population, hou
 
 ## Repo Structure
 * _cmd_: This folder has both the main.go and main_test.go files. The executable will be generated here from the commands above.
+* _Manager_: This contains the game manager that monitors each country for proposed schedules and determines the best overall schedule.
 * _Scheduler_: Holds the actual scheduler functions and maintains all countries, resources, and actions that can be used in a schedule.
 * _Simulator_: Holds the simulator that will duplicate the world state, simulate actions that can be taken, and then search for the best action. It will then pass this back to the main process that will tell the scheduler to enact the first action in this schedule.
 * _Resources_: Holds the resource struct and functions.
