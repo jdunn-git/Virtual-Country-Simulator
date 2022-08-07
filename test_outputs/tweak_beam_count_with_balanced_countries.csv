@@ -1,5 +1,5 @@
 Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
-TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,1,-2.1208629569198365,261.9670316208874,113.86642739205442,16.5794147,16.5992119,16.58666274,10
-TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,2,3.7908005931794833,307.4371911927268,108.29890139448317,16.6095564,16.6841161,16.64424184,10
-TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,3,0.6134948527144957,299.8558133894523,101.64478952198776,16.7209708,16.7356844,16.72942321,10
-TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,4,-16.5176773801295,317.69094364595094,77.92628329704897,16.7201188,16.7377358,16.72679745,10
+TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,1,51.845962545321974,109.77186414308335,91.43311068782101,21.7496307,21.7728669,21.76162868,10
+TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,2,54.04716213799326,107.22205641797727,79.63467850256461,21.7474777,21.7636231,21.75488886,10
+TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,3,59.42947724666559,110.20677470426921,81.32394037375768,21.7885625,21.8424147,21.81990324,10
+TweakBeamCountWithBalancedCountries,inputs/countries_balanced.csv,BeamCount,4,54.577905581517946,97.26517381430926,75.25588404129658,21.8434216,21.9055967,21.88192146,10

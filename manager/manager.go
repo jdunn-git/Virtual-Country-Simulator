@@ -118,6 +118,9 @@ func (gm *GameManager) Run(rounds int) float64 {
 
 	var averageQualityDelta float64
 
+	// Keep track of the sum of the delta from start to finish of the quality metrics
+	finalQualityDeltaSum := .0
+
 	// Infinite loop while running, but will close whenever main terminates
 	for round := 1; round <= rounds; round++ {
 		fmt.Printf("Running the game manager for round %v out of %v\n", round, rounds)
@@ -126,9 +129,6 @@ func (gm *GameManager) Run(rounds int) float64 {
 		if round == rounds {
 			_ = round
 		}
-
-		// Keep track of the sum of the delta from start to finish of the quality metrics, and reset each round
-		finalQualityDeltaSum := .0
 
 		// Check for game termination
 		if gm.terminateChan != nil {
@@ -145,8 +145,8 @@ func (gm *GameManager) Run(rounds int) float64 {
 			}
 		}
 
-		proposedSchedules := make([]Schedule, len(gm.scheduleProposalChans))
-		proposals := 0
+		proposedSchedules := make(map[float64]Schedule, len(gm.scheduleProposalChans))
+		maximumQualityDelta := .0
 
 		proposalRoundInformation := fmt.Sprintf("***********************************************************************************************\n")
 		proposalRoundInformation = fmt.Sprintf("%s*************************************  Round %v Proposals *************************************\n",
@@ -163,24 +163,38 @@ func (gm *GameManager) Run(rounds int) float64 {
 		// Listen on each registered channel until a message is received from each country
 		for _, propChan := range gm.scheduleProposalChans {
 			propSchedule := <-propChan
-			proposedSchedules[proposals] = propSchedule
-			proposals++
 
-			// Add the quality delta of each country
+			proposedQualityDelta := .0
+			//fmt.Printf("* Showing quality ratings for %s\n", propSchedule.ProposedCountry.GetName())
 			for _, qualityRating := range propSchedule.State.GetFinalCountryQualitiesDelta() {
-				finalQualityDeltaSum += qualityRating
+				proposedQualityDelta += qualityRating
 			}
+
+			// Keep the maximum up to date
+			if maximumQualityDelta < proposedQualityDelta {
+				maximumQualityDelta = proposedQualityDelta
+			} else if maximumQualityDelta == 0 {
+				maximumQualityDelta = proposedQualityDelta
+			}
+
+			// Store the quality delta and schedules in the map
+			proposedSchedules[proposedQualityDelta] = propSchedule
 
 			// print the proposal to the file
 			gm.printToFile(gm.proposedScheduleFilename, fmt.Sprintf("Proposed Country:\t%s\n", propSchedule.ProposedCountry.GetName()))
 			gm.printToFile(gm.proposedScheduleFilename, propSchedule.State.ToString())
 		}
 
-		// Get the average expected utility across each country
-		averageQualityDelta = finalQualityDeltaSum / float64(len(proposedSchedules))
-
 		// Decide on best schedule
-		bestSchedule := gm.GetBestSchedule(proposedSchedules)
+		//bestSchedule := gm.GetBestSchedule(proposedSchedules)
+		bestSchedule := proposedSchedules[maximumQualityDelta]
+
+		//fmt.Printf("Chosen best schedule was %s with a combined quality delta of %v\n", bestSchedule.ProposedCountry.GetName(), maximumQualityDelta)
+		//fmt.Printf("* Showing quality ratings for %s\n", bestSchedule.ProposedCountry.GetName())
+		// Add the quality delta of each country
+		for _, qualityRating := range bestSchedule.State.GetFinalCountryQualitiesDelta() {
+			finalQualityDeltaSum += qualityRating
+		}
 
 		// Print best schedule information to the file
 		scheduleInformation := fmt.Sprintf("Chose schedule from:\t\t    %s\nExpected Utility for %s:\t    %v\n",
@@ -196,6 +210,9 @@ func (gm *GameManager) Run(rounds int) float64 {
 
 		// We will now continue on with the next iteration of the for loop and block when listening for new proposals
 	}
+
+	// Get the average expected utility across each country
+	averageQualityDelta = finalQualityDeltaSum / (float64(len(gm.scheduleProposalChans)))
 
 	return averageQualityDelta
 }

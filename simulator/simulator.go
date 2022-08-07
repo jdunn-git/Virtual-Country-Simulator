@@ -423,13 +423,6 @@ func (ws *WorldState) GetExpectedUtility() float64 {
 func (ws *WorldState) GetExpectedUtilitySum() float64 {
 	sum := .0
 
-	//selfCountry, _ := countries.GetSelf(ws.SimulatedCountries)
-	//tmpQualityRating := selfCountry.GetQualityRating()
-	//tmpUndiscountedReward := selfCountry.GetUndiscountedReward()
-	//tmpDiscountedReward := selfCountry.GetDiscountedReward()
-	//fmt.Printf("\tPost-simulation self.Quality: %v, self.UndiscountedReward: %v, self.DiscountedReward: %v\n",
-	//	tmpQualityRating, tmpUndiscountedReward, tmpDiscountedReward)
-
 	//fmt.Printf("* Getting Expected Utility Sum\n")
 	state := ws
 	for state.Generation > -1 {
@@ -450,9 +443,11 @@ func (ws *WorldState) GetExpectedUtilitySum() float64 {
 func (ws *WorldState) GetFinalCountryQualitiesDelta() map[string]float64 {
 	retMap := make(map[string]float64, len(ws.SimulatedCountries))
 
+	//fmt.Printf("Final Quality Ratings: \n")
 	// Add the final quality of each country into the map
 	for countryName, country := range ws.SimulatedCountries {
 		retMap[countryName] = country.GetQualityRating()
+		//fmt.Printf("\t%s: %v\n", countryName, country.GetQualityRating())
 	}
 
 	// Get the initial state
@@ -460,11 +455,17 @@ func (ws *WorldState) GetFinalCountryQualitiesDelta() map[string]float64 {
 	for state.PreviousState != nil {
 		state = state.PreviousState
 	}
-
+	//fmt.Printf("Original Quality Ratings: \n")
 	// Subtract the initial state's quality of each country
 	for countryName, country := range state.SimulatedCountries {
+		//original := country.GetQualityRating()
+		//final := retMap[countryName]
 		retMap[countryName] -= country.GetQualityRating()
+		//fmt.Printf("\t%s: %v (%v - %v)\n", countryName, math.Round(retMap[countryName]),
+		//	math.Round(final), math.Round(original))
 	}
+
+	fmt.Println()
 
 	return retMap
 }
@@ -530,7 +531,8 @@ func (ws *WorldState) GenerateProbabilityOfSuccess(originalGeneration int) {
 	// Countries are now fully allowed to be selfish and propose whatever schedule they want, without considering how it
 	// will impact other countries
 	//ws.SuccessProbability = successOdds
-	ws.SuccessProbability = 0.95
+	ws.SuccessProbability = math.Sqrt(successOdds)
+	//ws.SuccessProbability = 0.95
 }
 
 // CalculateExpectedUtility will calculate the ExpectedUtility of this schedule

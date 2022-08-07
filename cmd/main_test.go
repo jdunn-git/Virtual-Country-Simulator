@@ -121,7 +121,6 @@ const (
 	randomCountriesFile      = "../inputs/countries_random.csv"
 	outputScheduleFile       = ""
 	proposedScheduleFilename = ""
-	numOutputSchedules       = 3
 	depthBound               = 8
 	frontierMaxSize          = 800
 	roundsToSimulate         = 10
@@ -174,7 +173,7 @@ func TestTweakMaxDepthWithBalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, maxDepth, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, maxDepth, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -257,7 +256,7 @@ func TestTweakMaxDepthWithImbalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, maxDepth, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, maxDepth, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -341,7 +340,7 @@ func TestTweakMaxDepthWithRandomCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, maxDepth, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, maxDepth, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -429,7 +428,7 @@ func TestTweakFrontierMaxSizeWithBalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, maxFrontierSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, maxFrontierSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -513,7 +512,7 @@ func TestTweakFrontierMaxSizeWithImbalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, maxFrontierSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, maxFrontierSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -597,7 +596,7 @@ func TestTweakFrontierMaxSizeWithRandomCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, maxFrontierSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, maxFrontierSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -687,7 +686,7 @@ func TestTweakGammaWithBalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -773,7 +772,7 @@ func TestTweakGammaWithImbalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -859,7 +858,7 @@ func TestTweakGammaWithRandomCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -949,7 +948,7 @@ func TestTweakFailureConstantWithBalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -1035,7 +1034,7 @@ func TestTweakFailureConstantWithImbalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -1121,7 +1120,7 @@ func TestTweakFailureConstantWithRandomCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -1209,7 +1208,7 @@ func TestTweakBeamCountWithBalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, testBeamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, testBeamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -1293,7 +1292,7 @@ func TestTweakBeamCountWithImbalancedCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time
@@ -1377,7 +1376,7 @@ func TestTweakBeamCountWithRandomCountries(t *testing.T) {
 
 		for i := 0; i < MaxIteration; i++ {
 			res := allCountrySchedulersWithGameManager(resourcesFile, balancedCountriesFile, outputScheduleFile,
-				proposedScheduleFilename, numOutputSchedules, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
+				proposedScheduleFilename, depthBound, frontierMaxSize, roundsToSimulate, beamCount,
 				testConstants)
 
 			totalTime += res.Time

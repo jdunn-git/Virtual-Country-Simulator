@@ -1,7 +1,7 @@
 Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
-TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-0.5,-5.362000313878069,209.97120110596575,63.06665041737792,16.7163158,16.7337201,16.72520132,10
-TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-1,25.815034821458994,316.8054611132294,95.99247174295724,16.7146664,16.7245156,16.72045297,10
-TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-1.5,-12.506934337773544,87.7292999470476,39.20365471070247,16.7167289,16.7274391,16.72234728,10
-TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-2,-3.627217082409686,311.6030351806233,114.18980883074475,16.71598,16.7383979,16.72568914,10
-TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-2.5,-9.488694712537495,299.8979186579433,70.65005157128066,16.716649,16.7362472,16.72615789,10
-TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-3,-1.6686151588089047,311.6030351806233,91.65200353942843,16.7147384,16.7354672,16.723700790000002,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-0.5,67.6090178181502,106.71901208621466,92.15616598705012,21.7749429,21.8718847,21.81014082,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-1,79.1533275732111,115.2276969169792,98.77127294845795,21.7635025,21.8518654,21.819082979999997,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-1.5,73.0041698369305,112.5139103335113,90.83179946228967,21.7898909,21.8473923,21.81280431,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-2,101.31154163580948,112.64088635342426,109.48890684871348,21.787103600000002,21.8489433,21.81147823,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-2.5,100.3476382464436,135.2305377304643,112.91207465196268,21.7880828,21.8640682,21.81511863,10
+TweakFailureConstantWithRandomCountries,inputs/countries_random.csv,FailureCost,-3,105.25792213077152,115.18250155260915,110.77329453870905,21.7842871,21.8559632,21.81045853,10

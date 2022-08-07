@@ -1,9 +1,9 @@
 Name,InitialStateFile,TweakedParameter,Value,MinQualityDelta,MaxQualityDelta,AverageQualityDelta,MinTime,MaxTime,AverageTime,TestRuns
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,3,-3.3207579595841707,5.886555881581359,1.8450270501709665,16.5983545,16.6016864,16.600310970000002,10
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,4,-8.700000107288357,9.449440087375649,0.4354548555728119,16.5995238,16.601334,16.60052143,10
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,5,-3.8484443234586365,299.5680239624981,31.903453667718072,16.6001863,16.602142100000002,16.60075225,10
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,6,-7.569899018774095,305.74602445671,30.580621367859983,16.6149357,16.6630488,16.63177175,10
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,7,-0.04192020996094925,164.26225599411543,38.04748410146196,16.7092849,16.741045,16.72942639,10
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,8,-5.147102338886953,317.7127432767119,111.17805874910763,16.7396952,16.7412692,16.74043967,10
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,9,15.21918819276243,188.93176958367872,59.022767768286016,16.7383636,16.7410838,16.74032341,10
-TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,10,29.514011181718047,96.01786167507225,64.29681195897543,16.7390588,16.741468,16.740331180000002,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,3,11.337453662378175,62.82798146211686,30.635123475675357,21.7520647,21.7729251,21.75727213,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,4,13.723700148364935,63.2081230901905,34.52772579696142,21.7566322,21.7690594,21.76220563,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,5,15.643874485182158,63.76705658199569,42.4108548233972,21.752847,21.7882217,21.763086219999998,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,6,46.95733463783947,67.579517899518,53.62224076604038,21.7565112,21.7750743,21.76302353,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,7,51.01927010204798,99.7573552996502,72.38610798284006,21.7600433,21.8310862,21.78858506,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,8,49.02441627489353,113.31358266698066,84.2987245151822,21.788011,21.8545011,21.81010752,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,9,77.11469136216893,105.21684968660843,88.31359122222304,21.8186911,21.8823136,21.84968993,10
+TweakMaxDepthWithImbalancedCountries,inputs/countries_imbalanced.csv,MaxDepth,10,80.26514945909189,143.0215964033856,101.21499001409293,21.8259832,21.9057489,21.86774123,10
