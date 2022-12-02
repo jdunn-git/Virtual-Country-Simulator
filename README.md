@@ -28,6 +28,10 @@ After each country's frontier (i.e. the priority queue) has filled up, then it w
 Each country will then re-initialized simulator with the current "real" world, and then they will continue to search for the next round.
 
 
+## Architecture Diagram
+![](https://github.com/jdunn-git/Virtual-Country-Simulator/Architecture_Diagram.png)
+
+
 ## Running
 With Golang 1.18 installed and your GOROOT and GOPATH set correctly, you should be able to run the following commands:
 
