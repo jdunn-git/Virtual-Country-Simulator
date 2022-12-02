@@ -29,7 +29,7 @@ Each country will then re-initialized simulator with the current "real" world, a
 
 
 ## Architecture Diagram
-![](https://github.com/jdunn-git/Virtual-Country-Simulator/Architecture_Diagram.png)
+![](https://github.com/jdunn-git/Virtual-Country-Simulator/blob/master/Architecture_Diagram.png)
 
 
 ## Running
